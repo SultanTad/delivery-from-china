@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/mobile-styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/43baaa64c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <div class="box-logos">
+              <a href="/"
+                ><img src="/assets/images/Tao585.webp" alt="" class="logo"
+              /></a>
+              <div class="burger-icon">
+                <img src="/assets/images/burger.svg" alt="" />
+              </div>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <p>О нас</p>
+                <img src="/assets/images/arrow-down.svg" alt="" />
+              </li>
+              <li class="menu__item">
+                <p>Помощь</p>
+                <img src="/assets/images/arrow-down.svg" alt="" />
+              </li>
+              <li class="menu__item">Доставка</li>
+              <li class="menu__item">Оплата</li>
+              <li class="menu__item">Карго</li>
+              <li class="menu__item">Новости</li>
+            </ul>
+            <div class="nav__inner">
+              <div class="exchange-rates">
+                <p>1 ¥ = <span>12,53 ₽</span></p>
+                <p>1 $ = <span>92,02 ₽</span></p>
+              </div>
+              <div class="log-in">
+                <img src="/assets/images/log-in.svg" alt="" />
+                <p>Войти</p>
+              </div>
+            </div>
+            <div class="mobile-menu">
+              <div class="mobile-menu__close">
+                <i
+                  class="fa-solid fa-xmark"
+                  style="
+                    font-size: 35px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 24px 16px;
+                    display: flex;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <ul class="mobile-menu__list">
+                <li class="menu__item">
+                  <a href="">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Помощь</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Доставка</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Оплата</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Карго</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Новости</a>
+                </li>
+              </ul>
+              <div class="mobile-nav__inner">
+                <div class="mobile-exchange-rates">
+                  <p>1 ¥ = <span>12,53 ₽</span></p>
+                  <p>1 $ = <span>92,02 ₽</span></p>
+                </div>
+                <div class="log-in">
+                  <img src="/assets/images/log-in.svg" alt="" />
+                  <p>Войти</p>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <section class="checkout-stage-two">
+          <div class="container">
+            <div class="stage-two__inner">
+              <h2>оформление заказа</h2>
+              <div class="checkout__stages">
+                <div class="stages__block second-phase">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/order-list.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>состав заказа</p>
+                  </div>
+                </div>
+                <div class="stages__block active-stage">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/geo-icon.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>адрес доставки</p>
+                  </div>
+                </div>
+                <div class="stages__block">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/confirm-order.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>подтверждение заказа</p>
+                  </div>
+                </div>
+              </div>
+              <section class="checkout-form">
+                <div class="form-header">
+                  <h3>Ваши данные и адрес</h3>
+                  <div class="use-saved-data">
+                    <img src="/assets/images/use-data-icon.svg" alt="" />
+                    <p>Использовать сохраненные данные</p>
+                  </div>
+                </div>
+                <form>
+                  <input class="box-1" type="text" placeholder="ФИО*" />
+                  <input class="box-2" type="tel" placeholder="Телефон*" />
+                  <input class="box-3" type="text" placeholder="Город*" />
+                  <input
+                    class="box-4"
+                    type="text"
+                    placeholder="Адрес (улица, дом, квартира, индекс)*"
+                  />
+                  <textarea
+                    class="box-5"
+                    placeholder="Комментарий к заказу*"
+                  ></textarea>
+                </form>
+                <div class="use-data__pop-up">
+                  <div class="use-data__inner">
+                    <img
+                      class="pop-up__close-btn"
+                      src="/assets/images/close-pop-up.svg"
+                      alt=""
+                    />
+                    <h3>Использовать сохраненные данные</h3>
+                    <div class="saved-data__box">
+                      <div class="delete__saved-data">
+                        <img src="/assets/images/delete-saved.svg" alt="" />
+                      </div>
+                      <div class="saved-data__first-block">
+                        <div class="fullname">
+                          <h4>ФИО</h4>
+                          <p>Репнинская Наталья Владимировна</p>
+                        </div>
+                        <div class="phone-number">
+                          <h4>Телефон</h4>
+                          <p>+7 (911) 765-89-89</p>
+                        </div>
+                      </div>
+                      <div class="saved-data__second-block">
+                        <div class="city">
+                          <h4>Город</h4>
+                          <p>Санкт-Петербург</p>
+                        </div>
+                        <div class="address">
+                          <h4>Адрес</h4>
+                          <p>ул. 2-я Тупиковая, д. 30, кв 4, 195043</p>
+                        </div>
+                      </div>
+                      <div class="saved-data__edit">
+                        <img src="/assets/images/Pen.svg" alt="" />
+                        <p>Изменить</p>
+                      </div>
+                    </div>
+                    <div class="saved-data__box">
+                      <div class="delete__saved-data">
+                        <img src="/assets/images/delete-saved.svg" alt="" />
+                      </div>
+                      <div class="saved-data__first-block">
+                        <div class="fullname">
+                          <h4>ФИО</h4>
+                          <p>Репнинская Наталья Владимировна</p>
+                        </div>
+                        <div class="phone-number">
+                          <h4>Телефон</h4>
+                          <p>+7 (911) 765-89-89</p>
+                        </div>
+                      </div>
+                      <div class="saved-data__second-block">
+                        <div class="city">
+                          <h4>Город</h4>
+                          <p>Санкт-Петербург</p>
+                        </div>
+                        <div class="address">
+                          <h4>Адрес</h4>
+                          <p>ул. 2-я Тупиковая, д. 30, кв 4, 195043</p>
+                        </div>
+                      </div>
+                      <div class="saved-data__edit">
+                        <img src="/assets/images/Pen.svg" alt="" />
+                        <p>Изменить</p>
+                      </div>
+                    </div>
+                    <div class="use-data__footer">
+                      <button>Использовать данные</button>
+                      <div class="add-more-product">
+                        <img src="/assets/images/add-product-plus.svg" alt="">
+                        <p>Добавить новые данные</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="type-cargo">
+                <h3>Тип упаковки груза</h3>
+                <p>
+                  Независимо от вида упаковки, она добавляет к стоимости
+                  доставки от 1 до 5 кг общей массы груза. Все короби тщательно
+                  обмотаны скотчем, помещены в мешки и снова закреплены скотчем
+                  для обеспечения надежности и сохранности груза.
+                </p>
+                <form>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn1" id="radio-btn1" />
+                      <label for="radio-btn1"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn2" id="radio-btn2" />
+                      <label for="radio-btn2"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn3" id="radio-btn3" />
+                      <label for="radio-btn3"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn4" id="radio-btn4" />
+                      <label for="radio-btn4"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn5" id="radio-btn5" />
+                      <label for="radio-btn5"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input type="radio" class="radio-btn6" id="radio-btn6" />
+                      <label for="radio-btn6"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Обрешетка</p>
+                      <span
+                        >от 400 руб. за единицу (жесткий каркас из досок вокруг
+                        корбки)</span
+                      >
+                    </div>
+                  </div>
+                </form>
+              </section>
+              <section class="delivery-methods">
+                <div class="delivery-methods__china">
+                  <h3>способ доставки из китая в рф</h3>
+                  <p>
+                    Выберите подходящий способ доставки из Китая до Москвы.
+                    Подробнее о способах доставки и ценах можно узнать на
+                    <a href="">странице доставки</a>
+                  </p>
+                  <form>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="delivery-radio-btn1"
+                          id="delivery-radio-btn1"
+                        />
+                        <label for="delivery-radio-btn1"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="delivery-radio-btn2"
+                          id="delivery-radio-btn2"
+                        />
+                        <label for="delivery-radio-btn2"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="delivery-radio-btn3"
+                          id="delivery-radio-btn3"
+                        />
+                        <label for="delivery-radio-btn3"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="delivery-methods__rus">
+                  <h3>способ доставки по россии</h3>
+                  <p>
+                    Выберите способ транспортировки груза по России после его
+                    прибытия в Москву из Китая. Подробнее о способах доставки и
+                    ценах можно узнать на <a href="">странице доставки</a>
+                  </p>
+                  <form>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="rus-radio-btn1"
+                          id="rus-radio-btn1"
+                        />
+                        <label for="rus-radio-btn1"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="rus-radio-btn2"
+                          id="rus-radio-btn2"
+                        />
+                        <label for="rus-radio-btn2"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <div class="radio-box">
+                        <input
+                          type="radio"
+                          class="rus-radio-btn3"
+                          id="rus-radio-btn3"
+                        />
+                        <label for="rus-radio-btn3"></label>
+                      </div>
+                      <div class="radio-text">
+                        <p>Экспресс доставка</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section class="insurance-cargo">
+                <h3>страховка груза</h3>
+                <p>
+                  Мы компенсирует полную стоимость повреждённой или утерянной
+                  части груза и ее доставку до Москвы. Стоимость страховки - 1%
+                  от общей суммы заказа с учетом доставки до Москвы. Мы не несем
+                  ответственность за незастрахованный груз! Страховка на
+                  повреждения не распространяется для хрупкого груза без
+                  обрешетки. Чтобы узнать подробнее про страховку груза и на
+                  какие страховые случаи она распространяется, то перейдите на
+                  страницу страхования
+                </p>
+                <form>
+                  <div class="form-item">
+                    <div class="radio-box">
+                      <input
+                        type="radio"
+                        class="insurance-radio-btn1"
+                        id="insurance-radio-btn1"
+                      />
+                      <label for="insurance-radio-btn1"></label>
+                    </div>
+                    <div class="radio-text">
+                      <p>Экспресс доставка</p>
+                    </div>
+                  </div>
+                </form>
+              </section>
+              <div class="attention">
+                <img src="/assets/images/attention.svg" alt="" />
+                <p>
+                  Внимательно проверьте введенную вами информацию, мы отправим
+                  груз основываясь на этих данных.
+                </p>
+              </div>
+              <div class="next-step stage-two">
+                <button>
+                  <a href="">Вернуться назад</a>
+                </button>
+                <button>
+                  <a href="">Подтвердить</a>
+                </button>
+              </div>
+              <div class="mobile-stages__block">
+                <div class="image-wrapper">
+                  <img src="/assets/images/confirm-order.svg" alt="" />
+                </div>
+                <div class="stages__block-text">
+                  <p>подтверждение заказа</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-wrapper">
+            <ul class="footer__inner">
+              <div class="footer__logo">
+                <img src="/assets/images/Tao585.webp" alt="" />
+              </div>
+              <li>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="">О нас</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Помощь</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Доставка</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Карго</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Выкуп</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Новости</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__exchange-rates footer-order">
+                <dl>
+                  <div class="exchange-rates__box">
+                    <dt>Текущий курс</dt>
+                    <dd>1 ¥ = <span>12,53 ₽</span></dd>
+                    <dd>1 $ = <span>92,02 ₽</span></dd>
+                  </div>
+                  <dd>
+                    <img src="/assets/images/currency-chart.svg" alt="" />
+                  </dd>
+                </dl>
+              </li>
+              <li class="footer__work-time">
+                <dl>
+                  <dt>Время работы</dt>
+                  <dd>Москва</dd>
+                  <dd class="work-time__box">
+                    <p>Пн-Сб с 09:00 до 18:00</p>
+                    <p>Вс - выходной</p>
+                  </dd>
+                  <dd>Китай</dd>
+                  <dd class="work-time__box">
+                    <p>Пн-Сб с 09:00 до 18:00</p>
+                    <p>Вс - выходной</p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="footer__contact-us">
+                <dl>
+                  <dt>Связаться с нами</dt>
+                  <dd>
+                    <p>Номер в России</p>
+                    <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                  </dd>
+                  <dd>
+                    <p>Номер в Китае</p>
+                    <a href="tel:+8699999999999">+86 99999999999</a>
+                  </dd>
+                  <dd>
+                    <a href="mailto:chinatao@mail.com">chinatao@mail.com</a>
+                  </dd>
+                </dl>
+                <ul class="social__list">
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/inst.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/telegram.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/vk.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/social-network.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="copyright">© China-Tao 2024 все права защищены</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2708 @@
+@font-face {
+  font-family: "BaronNeue";
+  src: url(/assets/fonts/Baron\ Neue.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1224px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+/* Стили Главной страницы */
+
+.header {
+  background-color: #f3f3f6;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.box-logos {
+  display: flex;
+  align-items: center;
+  gap: 0 80px;
+}
+
+.logo {
+  width: 98px;
+  height: 20px;
+}
+
+.burger-icon {
+  display: none;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 0 93px;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 32px;
+}
+
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f2f3f7;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-200%);
+  transition: all 1s;
+  padding: 40px 16px;
+}
+
+.mobile-menu__list {
+  margin-bottom: 60px;
+}
+
+.mobile-menu__list li a {
+  padding: 8px 0;
+}
+
+.mobile-menu.open-menu {
+  transform: translate(0);
+  transition: all 0.8s;
+}
+
+.mobile-nav__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+}
+
+.menu__item,
+.log-in {
+  display: flex;
+  align-items: center;
+}
+
+.log-in img {
+  margin-right: 12px;
+}
+
+.exchange-rates {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+}
+
+.mobile-exchange-rates {
+  display: flex;
+  flex-direction: column;
+}
+
+.exchange-rates span,
+.mobile-exchange-rates span {
+  color: rgb(54, 106, 220);
+}
+
+.promo {
+  background-image: url(/assets/images/promo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__inner {
+  min-height: 100dvh;
+  font-family: "BaronNeue";
+  padding-top: 230px;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 689px;
+}
+
+.promo__inner h1,
+.promo__inner p {
+  color: #fff;
+}
+
+.promo__inner h1 {
+  font-size: 72px;
+  margin-bottom: 32px;
+  line-height: 72px;
+}
+
+.promo__inner p {
+  font-size: 18px;
+  margin-bottom: 72px;
+  line-height: 23px;
+}
+
+.btn-box {
+  display: flex;
+  gap: 0 24px;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.btn-box a:first-child button {
+  background-color: rgb(54, 106, 220);
+  color: #fff;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-box a:last-child button {
+  background-color: rgb(171, 197, 255);
+  color: rgb(40, 40, 44);
+  border: none;
+  padding: 16px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.why-choose-us {
+  border-radius: 40px;
+  background-color: #fff;
+  margin-top: -35px;
+  position: relative;
+  z-index: 100;
+}
+
+.why-choose-us__inner {
+  padding: 128px 0;
+}
+
+.why-choose-us__header {
+  max-width: 791px;
+}
+
+.why-choose-us__header h2 {
+  font-family: "BaronNeue";
+  font-size: 64px;
+  line-height: 64px;
+  color: rgb(40, 40, 44);
+  margin-bottom: 32px;
+}
+
+.why-choose-us__header p {
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.why-choose-us__list {
+  margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 24px;
+}
+
+.why-choose-us__list img {
+  width: 242px;
+  object-fit: cover;
+}
+
+.why-choose-us__item {
+  padding: 32px;
+  background-color: rgb(243, 243, 246);
+  border-radius: 40px;
+  border: none;
+  width: 39%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.item3 {
+  padding: unset;
+  background-color: transparent;
+}
+
+.why-choose-us__item.animation-class {
+  opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.why-choose-us__item.animation-class:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.why-choose-us__item.animation-class:nth-child(3) {
+  transition-delay: 0.7s;
+}
+.why-choose-us__item.animation-class:nth-child(4) {
+  transition-delay: 0.9s;
+}
+.why-choose-us__item.animation-class:nth-child(5) {
+  transition-delay: 1s;
+}
+
+.why-choose-us__item h3 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  color: rgb(40, 40, 44);
+  margin-bottom: 32px;
+}
+.why-choose-us__item p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.why-choose-us__stages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+  color: rgb(40, 40, 44);
+}
+
+.stages__left-block {
+  max-width: 588px;
+}
+
+.stages__left-block h2 {
+  font-size: 64px;
+  font-family: "BaronNeue";
+  margin-bottom: 32px;
+}
+
+.stages__left-block p {
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.stages__list-block {
+  display: flex;
+  flex-direction: column;
+  gap: 48px 0;
+  max-width: 486px;
+}
+
+.stages-item {
+  opacity: 0;
+  transform: translateY(50px);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.stages-item.animation-class {
+  opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.stages-item.animation-class:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.stages-item.animation-class:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.stages-item.animation-class:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.stages-item h3 {
+  font-size: 16px;
+  line-height: 110%;
+  font-family: "BaronNeue";
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 0;
+}
+
+.stages-item h3::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: -3px;
+  z-index: -1;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(54, 106, 220);
+}
+
+.stages-item p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.our-specialists {
+  background-color: #08132b;
+  margin-top: -38px;
+}
+
+.our-specialists__inner {
+  padding: 128px 0;
+  min-height: 100dvh;
+}
+
+.our-specialists__header {
+  max-width: 679px;
+  margin-bottom: 72px;
+}
+
+.our-specialists__inner h2 {
+  font-family: "BaronNeue";
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.our-specialists__inner p {
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+}
+
+.our-specialists__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 24px;
+}
+
+.our-specialists__item {
+  opacity: 0;
+  transform: translateY(50px);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.our-specialists__item.animation-class {
+  opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.our-specialists__item.animation-class:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.our-specialists__item.animation-class:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.our-specialists__item.animation-class:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.our-specialists__item.animation-class:nth-child(5) {
+  transition-delay: 0.7s;
+}
+.our-specialists__item.animation-class:nth-child(6) {
+  transition-delay: 0.8s;
+}
+
+
+.our-specialists__item img {
+  margin-bottom: -38px;
+  margin-left: 30px;
+}
+
+.item-description {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 50px 32px 32px 32px;
+}
+
+.item-description h3,
+.item-description p {
+  color: rgb(40, 40, 44);
+  font-size: 16px;
+}
+
+.item-description h3 {
+  font-family: "BaronNeue";
+  line-height: 110%;
+}
+
+.item-description p {
+  line-height: 20px;
+  font-family: "Mulish";
+}
+
+.testimonials {
+  padding: 128px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #fff;
+  position: relative;
+  margin-top: -36px;
+}
+
+.testimonials-title {
+  font-family: "BaronNeue";
+  font-size: 64px;
+  color: rgb(40, 40, 44);
+  margin-bottom: 72px;
+}
+
+.testimonials-slider {
+  padding-left: calc((100% - 1200px) / 2);
+}
+
+
+
+.testimonials-slide {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: rgb(243, 243, 246);
+  border-radius: 40px;
+  height: 312px;
+}
+
+.slide-header {
+  display: flex;
+  gap: 0 20px;
+  margin-bottom: 24px;
+  align-items: center;
+  font-family: "BaronNeue";
+  line-height: 110%;
+  color: rgb(40, 40, 44);
+  font-size: 16px;
+}
+
+.slide-text {
+  margin-bottom: 16px;
+  line-height: 20px;
+  font-family: "Mulish";
+  font-size: 16px;
+}
+
+.slide-product-images {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.services__item {
+  opacity: 0;
+  transform: translateY(50px);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.services__item.animation-class {
+  opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.services__item.animation-class:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.services__item.animation-class:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.services__item.animation-class:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.services__item.animation-class:nth-child(5) {
+  transition-delay: 0.7s;
+}
+.services__item.animation-class:nth-child(6) {
+  transition-delay: 0.8s;
+}
+.services__item.animation-class:nth-child(7) {
+  transition-delay: 0.9s;
+}
+.services__item.animation-class:nth-child(8) {
+  transition-delay: 1s;
+}
+
+
+.services__item {
+  padding: 24px 32px;
+  background-color: rgb(243, 243, 246);
+  border-radius: 20px;
+  color: rgb(40, 40, 44);
+  font-size: 16px;
+  line-height: 110%;
+  font-family: "BaronNeue";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services__item svg {
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.help {
+  background-color: #fff;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  margin-bottom: -36px;
+}
+
+.help__inner {
+  padding-bottom: 128px;
+}
+
+.help__header h2 {
+  color: rgb(40, 40, 44);
+}
+
+.help__header h2,
+.news__header h2 {
+  font-size: 64px;
+  font-family: "BaronNeue";
+  margin-bottom: 32px;
+}
+
+.help__header p {
+  font-family: "Mulish";
+  font-size: 16px;
+  color: rgb(40, 40, 44);
+  line-height: 23px;
+  margin-bottom: 72px;
+}
+
+.help__inner button {
+  margin-top: 48px;
+}
+
+.help__inner button,
+.news__header button,
+.news-mobile__btn button,
+.send-for-review button {
+  border: none;
+  background-color: rgb(54, 106, 220);
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Mulish";
+  line-height: 23px;
+  padding: 16px 30px;
+  border-radius: 10px;
+}
+
+.help__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news {
+  background-color: #08132b;
+}
+
+.news__inner {
+  padding: 128px 0;
+}
+
+.news__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.news__header h2 {
+  color: #fff;
+}
+
+.news__inner .news__list {
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 24px;
+}
+
+.all-news__inner .news__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.news__inner .news__item,
+.all-news__inner .news__item {
+  padding: 32px;
+  border-radius: 40px;
+}
+
+.news__inner .news__item {
+  background-color: #fff;
+  color: rgb(40, 40, 44);
+  width: 384px;
+  opacity: 0;
+  transform: translateY(50px);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.news__inner .news__item.animation-class {
+  opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.news__inner .news__item.animation-class:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.news__inner .news__item.animation-class:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+
+
+.news__list::-webkit-scrollbar {
+  height: 0;
+}
+
+.news__item-text h3 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  margin-bottom: 16px;
+}
+
+.news__item-text p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+.news__item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news__item-footer p {
+  color: rgb(159, 164, 175);
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.news__item-footer__inner span,
+.news__item-footer__inner p {
+  display: block;
+  color: rgb(54, 106, 220);
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.news__item-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(40, 40, 44);
+  gap: 0 8px;
+  cursor: pointer;
+}
+
+.news-mobile__btn {
+  margin-top: 40px;
+  justify-content: center;
+  display: none;
+}
+
+.footer {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: rgb(243, 243, 246);
+  position: relative;
+  margin-top: -36px;
+}
+
+.footer-wrapper {
+  padding: 56px 0;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.footer__exchange-rates span {
+  display: block;
+  color: rgb(54, 106, 220);
+}
+
+.footer__exchange-rates dl dt,
+.footer__work-time dl dt,
+.footer__contact-us dl dt {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  font-family: "Mulish";
+  margin-bottom: 20px;
+}
+
+.footer__exchange-rates dl dd {
+  display: flex;
+  gap: 4px 0;
+}
+
+.footer__exchange-rates dl dd img {
+  margin-top: 20px;
+}
+
+.work-time__box {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+
+.footer__contact-us dl dd {
+  margin-bottom: 20px;
+}
+
+.footer__contact-us dl dd p {
+  font-size: 12px;
+  color: rgb(159, 164, 175);
+  font-family: "Mulish";
+}
+
+.social__list {
+  display: flex;
+  gap: 0 24px;
+}
+
+/* Стили Страницы Личного профиля */
+
+.personal-acount {
+  padding: 160px 0 128px 0;
+}
+
+.sub-nav-menu {
+  font-size: 16px;
+  font-family: "Mulish";
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.sub-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+}
+
+.sub-nav__item-link {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  cursor: pointer;
+}
+
+.sub-nav__item-link span {
+  display: block;
+}
+
+.sub-nav__log-out {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  color: rgb(159, 164, 175);
+}
+
+.personal-data {
+  margin-top: 56px;
+}
+
+.personal-data__title {
+  margin-bottom: 24px;
+}
+
+.personal-data__title .sub-nav__log-out {
+  display: none;
+}
+
+.personal-data h2 {
+  font-family: "BaronNeue";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  color: rgb(40, 40, 44);
+}
+
+.personal-data__inner {
+  padding: 40px;
+  border-radius: 40px;
+  background-color: rgb(243, 243, 246);
+  font-size: 16px;
+  font-family: "Mulish";
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.personal-data__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.personal-info {
+  display: flex;
+  gap: 0 20px;
+}
+
+.personal-avatar {
+  width: 100px;
+}
+
+.personal-info__inner,
+.personal-info__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-info__block {
+  gap: 12px 0;
+}
+
+.personal-info__inner h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.personal-info__block div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 8px;
+}
+
+.personal-info__block div span {
+  color: rgb(54, 106, 220);
+}
+
+.personal-data__contacts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.personal-settings p {
+  display: flex;
+  gap: 0 11px;
+}
+
+.personal-settings p span {
+  color: rgb(54, 106, 220);
+}
+
+.personal-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 26px 0;
+}
+
+.change-pass,
+.edit-settings {
+  cursor: pointer;
+}
+
+.personal-data__contacts h4 {
+  color: rgb(159, 164, 175);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.personal-data__contacts .address {
+  width: 33%;
+}
+
+.saved-data {
+  margin-top: 56px;
+}
+
+.saved-data h2 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  color: rgb(40, 40, 44);
+  margin-bottom: 24px;
+}
+
+.saved-data__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.saved-data__box,
+.summary-field__inner,
+.summary-price {
+  padding: 56px 40px 40px 40px;
+  background-color: rgb(243, 243, 246);
+  border-radius: 40px;
+  max-width: 588px;
+  font-family: "Mulish";
+  position: relative;
+}
+
+.delete__saved-data {
+  cursor: pointer;
+}
+
+.delete__saved-data img {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.saved-data__first-block {
+  margin-bottom: 24px;
+}
+
+.saved-data__second-block {
+  margin-bottom: 40px;
+}
+
+.saved-data__first-block,
+.saved-data__second-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-data__first-block h4,
+.saved-data__second-block h4,
+.saved-data__main h4 {
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(159, 164, 175);
+  margin-bottom: 12px;
+}
+
+.saved-data__first-block p,
+.saved-data__second-block p,
+.saved-data__main p {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.saved-data__edit {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.saved-data__edit p {
+  color: rgb(54, 106, 220);
+  cursor: pointer;
+}
+
+.add-data {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  margin-top: 26px;
+  cursor: pointer;
+}
+
+.add-data p {
+  color: rgb(54, 106, 220);
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.tabs__btn--active {
+  color: rgb(54, 106, 220);
+}
+
+.yours-orders {
+  margin-top: 100px;
+}
+
+.yours-orders h4 {
+  font-size: 16px;
+  line-height: 110%;
+  font-family: "BaronNeue";
+  color: rgb(40, 40, 44);
+  margin-bottom: 24px;
+}
+
+.orders-header {
+  border-radius: 40px;
+  padding: 40px;
+  background-color: rgb(243, 243, 246);
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 60px;
+  position: relative;
+}
+
+.orders-header:nth-child(1) .orders-question {
+  max-width: 229px;
+}
+
+.orders-header:last-child .orders-question {
+  max-width: 287px;
+}
+
+.orders-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 123px;
+  justify-content: space-between;
+}
+
+.orders-question h4 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  text-align: center;
+}
+
+.orders-question button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(54, 106, 220);
+  color: #fff;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.orders-header img {
+  position: absolute;
+}
+
+.online-shopping {
+  left: -10px;
+  top: 44px;
+}
+
+.delivery-truck {
+  right: -41px;
+  top: 48px;
+}
+
+.order-block {
+  padding: 40px;
+  border-radius: 40px;
+  background-color: rgb(243, 243, 246);
+  font-family: "Mulish";
+  max-width: 739px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.order-block__info {
+  display: flex;
+}
+
+.order-info__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.order-info__wrapper .edit-icons__product {
+  display: flex;
+  order: unset;
+  margin-right: 24px;
+}
+
+.info-header {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 0 24px;
+}
+
+.info-header p {
+  font-size: 12px;
+  color: rgb(159, 164, 175);
+  line-height: 15px;
+}
+
+.info-header p span {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.skeleton-img {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(217, 217, 217);
+  border-radius: 10px;
+}
+
+.info-footer {
+  display: flex;
+  gap: 0 8px;
+}
+
+.messages-history {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 10px 20px 20px;
+  max-width: 331px;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+  color: rgb(159, 164, 175);
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.order-block__footer {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  margin-top: 24px;
+}
+
+.order-block__footer p:nth-child(1) {
+  padding-left: 48px;
+}
+
+.order-block__footer p {
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(159, 164, 175);
+}
+
+.order-block__footer p span {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+  margin-left: 8px;
+}
+
+.order-block__footer p .not-paid {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(243, 71, 59);
+}
+
+/* Стили для страницы всех новостей */
+
+.all-news__wrapper,
+.checkout-stage-three__inner,
+.empty-order__inner,
+.added-goods__inner {
+  padding-top: 160px;
+  padding-bottom: 128px;
+}
+
+.all-news__wrapper h2 {
+  font-size: 32px;
+  font-family: "BaronNeue";
+  color: rgb(40, 40, 44);
+  line-height: 32px;
+  margin-bottom: 56px;
+}
+
+.all-news__inner .news__list {
+  gap: 24px;
+}
+
+.all-news__inner .news__item {
+  background-color: rgb(243, 243, 246);
+}
+
+/* Стили для пагинации */
+
+.pagination {
+  justify-content: center;
+  margin-top: 56px;
+  gap: 0 32px;
+}
+
+.pagination,
+.pagination__page-number {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__page-number {
+  font-family: "Mulish";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  gap: 0 24px;
+}
+
+.active-page-number {
+  color: #366adc;
+}
+
+/* Стили для попапа новости */
+
+.news__pop-up,
+.use-data__pop-up {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.pop-up__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  border-radius: 40px;
+  padding: 104px 40px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.pop-up__inner h3 {
+  margin-bottom: 32px;
+}
+
+.pop-up__inner h3,
+.use-data__inner h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.pop-up__inner p {
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.pop-up__close-btn {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  cursor: pointer;
+}
+
+.news__pop-up.active_shadow,
+.use-data__pop-up.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.pop-up__inner.active_window,
+.use-data__inner.active_window {
+  display: block;
+}
+
+/* Стили для попапа смены пароля */
+
+.change-pass__pop-up {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.change-pass__pop-up.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.change-pass__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  min-height: 430px;
+  border-radius: 40px;
+  padding: 72px 168px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.change-pass__inner.active_window {
+  display: block;
+}
+
+.change-pass__inner h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.change-pass__inner form,
+.edit-settings__inner form,
+.saved-data__pop-up form,
+.new-data__pop-up form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.change-pass__inner form input,
+.edit-settings__inner form input,
+.saved-data__pop-up form input,
+.new-data__pop-up form input,
+.checkout__add-product form input,
+.checkout-form form input,
+.checkout-form form textarea {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: "Mulish";
+  line-height: 20px;
+  border: none;
+}
+
+.change-pass__inner form button {
+  border: none;
+  background-color: rgb(159, 164, 175);
+  color: #fff;
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: "Mulish";
+  line-height: 23px;
+}
+
+.change-pass__inner img {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  cursor: pointer;
+}
+
+/* Стили для попапа редактирования личных данных */
+
+.edit-settings__pop-up {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-settings__pop-up.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-settings__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  border-radius: 40px;
+  padding: 72px 168px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.edit-settings__inner.active_window {
+  display: block;
+}
+
+.edit-settings__inner::-webkit-scrollbar {
+  width: 0;
+}
+
+.edit-settings__inner h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.edit-settings__inner p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.confirm-number {
+  display: flex;
+  gap: 0 8px;
+}
+
+.confirm-number p {
+  color: rgb(159, 164, 175);
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: unset;
+}
+
+.confirm-number span {
+  color: rgb(54, 106, 220);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+.checkbox + label,
+.radio-btn1 + label,
+.radio-btn2 + label,
+.radio-btn3 + label,
+.radio-btn4 + label,
+.radio-btn5 + label,
+.radio-btn6 + label,
+.delivery-radio-btn1 + label,
+.delivery-radio-btn2 + label,
+.delivery-radio-btn3 + label,
+.rus-radio-btn1 + label,
+.rus-radio-btn2 + label,
+.rus-radio-btn3 + label,
+.insurance-radio-btn1 + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox + label:before {
+  content: "";
+  position: absolute;
+  font-size: 16px;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  background: #f3f3f6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 1px solid rgb(40, 40, 44);
+  transition: 0.2s;
+}
+
+.radio-btn1 + label::before,
+.radio-btn2 + label::before,
+.radio-btn3 + label::before,
+.radio-btn4 + label::before,
+.radio-btn5 + label::before,
+.radio-btn6 + label::before {
+  top: 8px;
+}
+
+.delivery-radio-btn1 + label::before,
+.delivery-radio-btn2 + label::before,
+.delivery-radio-btn3 + label::before,
+.rus-radio-btn1 + label::before,
+.rus-radio-btn2 + label::before,
+.rus-radio-btn3 + label::before,
+.insurance-radio-btn1 + label::before {
+  top: 2px;
+}
+
+.radio-btn1 + label::before,
+.radio-btn2 + label::before,
+.radio-btn3 + label::before,
+.radio-btn4 + label::before,
+.radio-btn5 + label::before,
+.radio-btn6 + label::before,
+.delivery-radio-btn1 + label::before,
+.delivery-radio-btn2 + label::before,
+.delivery-radio-btn3 + label::before,
+.rus-radio-btn1 + label::before,
+.rus-radio-btn2 + label::before,
+.rus-radio-btn3 + label::before,
+.insurance-radio-btn1 + label::before {
+  content: "";
+  position: absolute;
+  font-size: 16px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: #f3f3f6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 1px solid rgb(40, 40, 44);
+  transition: 0.2s;
+}
+
+.radio-btn1:checked + label:before,
+.radio-btn2:checked + label:before,
+.radio-btn3:checked + label:before,
+.radio-btn4:checked + label:before,
+.radio-btn5:checked + label:before,
+.radio-btn6:checked + label:before,
+.delivery-radio-btn1:checked + label:before,
+.delivery-radio-btn2:checked + label:before,
+.delivery-radio-btn3:checked + label:before,
+.rus-radio-btn1:checked + label::before,
+.rus-radio-btn2:checked + label::before,
+.rus-radio-btn3:checked + label::before,
+.insurance-radio-btn1:checked + label::before {
+  content: url(/assets/images/radio-ellipse.svg);
+  border: 1px solid rgb(54, 106, 220);
+}
+
+.checkbox:checked + label:before {
+  content: url(/assets/images/checkbox.svg);
+  border: 1px solid rgb(54, 106, 220);
+}
+
+.checkbox + label {
+  padding-left: 32px;
+  font-size: 16px;
+  font-family: "Mulish";
+  line-height: 20px;
+}
+
+.choices {
+  margin-bottom: unset;
+}
+
+.choices__inner {
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.choices__list--dropdown {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+  color: rgb(54, 106, 220);
+}
+
+.choices__list--dropdown .choices__item {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(159, 164, 175);
+}
+
+.choices__list--dropdown .choices__list::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgb(243, 243, 246);
+  border-radius: 100px;
+}
+
+.choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+  background-color: rgb(54, 106, 220);
+  border-radius: 100px;
+}
+
+.choices[data-type*="select-one"]:after {
+  content: url(/assets/images/Down-in-select.svg);
+  border-style: unset;
+  right: 29px;
+  top: 40%;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+  padding-bottom: 16px;
+}
+
+.choices__placeholder {
+  opacity: unset;
+}
+
+.notify-by-telegram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit-settings__pop-up form .notify-by-telegram button {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  padding: 10px 16px;
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: rgb(38, 164, 227);
+  border: none;
+}
+
+.notify-by-telegram button p {
+  color: #fff;
+}
+
+.notify-by-telegram p {
+  color: rgb(98, 97, 100);
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: unset;
+}
+
+.edit-settings__pop-up form button {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background-color: rgb(54, 106, 220);
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+/* Стили для попапа редактирования сохраненных данных */
+
+.edit-saved-data {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-saved-data.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.saved-data__pop-up {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  min-height: 430px;
+  border-radius: 40px;
+  padding: 72px 168px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.saved-data__pop-up.active_window {
+  display: block;
+}
+
+.saved-data__pop-up h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.saved-data__pop-up form button {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background-color: rgb(54, 106, 220);
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+/* Стили для попапа добавления новых данных */
+
+.add-new-data {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-new-data.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.new-data__pop-up {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  min-height: 430px;
+  border-radius: 40px;
+  padding: 72px 168px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.new-data__pop-up.active_window {
+  display: block;
+}
+
+.new-data__pop-up h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.new-data__pop-up form button {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background-color: rgb(54, 106, 220);
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+/* Стили для пустой страницы оформления заказа */
+
+.blank-checkout__inner,
+.stage-one__inner,
+.stage-two__inner {
+  padding-top: 160px;
+  padding-bottom: 128px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blank-checkout__inner h2,
+.stage-one__inner h2,
+.stage-two__inner h2,
+.checkout-stage-three__inner h2,
+.empty-order__inner h2,
+.added-goods__inner h2 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 85px;
+  text-align: center;
+}
+
+.checkout__stages {
+  display: flex;
+  justify-content: center;
+  gap: 0 48px;
+}
+
+.mobile-stages__block {
+  display: none;
+}
+
+.stages__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stages__block-text {
+  border-radius: 10px;
+  padding: 27px 16px 16px 16px;
+  background-color: rgb(243, 243, 246);
+  margin-top: -12px;
+}
+
+.stages__block p,
+.mobile-stages__block p {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  color: rgb(159, 164, 175);
+}
+
+.active-stage {
+  color: rgb(54, 106, 220);
+}
+
+.active-stage .image-wrapper {
+  background-color: rgb(54, 106, 220);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  z-index: 100;
+  background-color: rgb(159, 164, 175);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 24px;
+}
+
+.checkout__add-product {
+  border-radius: 40px;
+  padding: 40px 129px;
+  background-color: rgb(243, 243, 246);
+  margin-top: 56px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__add-product h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+  color: rgb(40, 40, 44);
+  margin-bottom: 32px;
+}
+
+.checkout__add-product p {
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: "Mulish";
+  font-size: 16px;
+}
+
+.checkout__add-product p a {
+  color: rgb(54, 106, 220);
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+.checkout__add-product form {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 16px;
+}
+
+.checkout__add-product form input {
+  width: 100%;
+}
+
+.checkout__add-product form button {
+  background-color: rgb(54, 106, 220);
+}
+
+.checkout__add-product form button,
+.next-step button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.attention,
+.agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.attention img {
+  margin-right: 12px;
+}
+
+.attention p {
+  font-size: 12px;
+  font-family: "Mulish";
+}
+
+.attention p span {
+  color: rgb(54, 106, 220);
+}
+
+.next-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-step button {
+  background-color: rgb(159, 164, 175);
+}
+
+/* Стили для страницы оформления заказа - 1 этап */
+
+.stage-one__inner {
+  align-items: center;
+}
+
+.stage-one__inner .checkout__header,
+.stage-one__inner .checkout__products {
+  max-width: 996px;
+  width: 100%;
+}
+
+.checkout__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-radius: 20px;
+  background-color: rgb(243, 243, 246);
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+.checkout__header p {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(159, 164, 175);
+}
+
+.product__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__name,
+.product__info {
+  width: 100%;
+}
+
+.checkout__products {
+  padding: 40px;
+  border-radius: 40px;
+  background-color: rgb(243, 243, 246);
+}
+
+.checkout__products hr {
+  display: none;
+}
+
+.checkout__product {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.edit-icons__product {
+  display: none;
+  flex-direction: column;
+  gap: 12px 0;
+  order: 1;
+}
+
+.edit-icons__product img {
+  cursor: pointer;
+}
+
+.product-main__info {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.product__img {
+  display: flex;
+  gap: 0 24px;
+}
+
+.product__img img {
+  order: 2;
+}
+
+.stage-one__inner .edit-icons__product.mobile-block {
+  display: none;
+}
+
+.product__img .product__brief {
+  display: none;
+}
+
+.product__brief {
+  max-width: 235px;
+}
+
+.product__brief,
+.mobile-product__toggle .left-block {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  font-family: "Mulish";
+}
+
+.product__brief h4 {
+  background-color: rgb(229, 255, 209);
+  margin-bottom: 6px;
+}
+
+.product__brief-text {
+  color: rgb(54, 106, 220);
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+.product__brief p:nth-child(3) {
+  margin-bottom: 10px;
+}
+
+.product__brief p span,
+.mobile-product__toggle .left-block p span {
+  color: rgb(54, 106, 220);
+}
+
+.mobile-product__toggle {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.product__quantity-and-price {
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 10px;
+  width: 100%;
+  font-family: "Mulish";
+}
+
+.mobile-header {
+  display: none;
+}
+
+.product__toggle {
+  margin-right: 40px;
+  display: flex;
+}
+
+.product__toggle-inner,
+.right-block {
+  display: flex;
+}
+
+.product__toggle button,
+.right-block button {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.product__toggle input,
+.right-block input {
+  width: 49px;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+.product__toggle input:focus,
+.right-block input:focus,
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+}
+
+.price-box span {
+  color: rgb(54, 106, 220);
+}
+
+.add-more-product {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+  justify-content: center;
+  gap: 0 8px;
+}
+
+.add-more-product p,
+.add-product p,
+.change-recipient p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(54, 106, 220);
+}
+
+.stage-one__inner .attention {
+  margin-top: 24px;
+}
+
+.stage-one button {
+  background-color: rgb(54, 106, 220);
+}
+
+/* Стили для страницы оформления заказа - 2 этап */
+
+.checkout-form {
+  padding: 40px;
+  border-radius: 40px;
+  background-color: rgb(243, 243, 246);
+  margin-top: 56px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-header h3 {
+  font-size: 16px;
+  font-family: "BaronNeue";
+  line-height: 110%;
+}
+
+.use-saved-data {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  cursor: pointer;
+}
+
+.use-saved-data p {
+  color: rgb(54, 106, 220);
+  font-size: 16px;
+  font-family: "Mulish";
+  line-height: 20px;
+}
+
+.checkout-form form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+  grid-template-areas:
+    "A A A A   B B B B"
+    "C C C C   D D D D"
+    "E E E E   E E E E";
+}
+
+.box-1 {
+  grid-area: A;
+}
+.box-2 {
+  grid-area: B;
+}
+.box-3 {
+  grid-area: C;
+}
+.box-4 {
+  grid-area: D;
+}
+
+.box-5 {
+  grid-area: E;
+}
+
+.checkout-form form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.checkout-form form .form-item {
+  display: flex;
+  align-items: center;
+}
+
+.radio-text {
+  margin-left: 30px;
+}
+
+.type-cargo,
+.delivery-methods__china,
+.delivery-methods__rus,
+.insurance-cargo {
+  padding: 40px;
+  border-radius: 40px;
+  background-color: rgb(243, 243, 246);
+  margin-top: 24px;
+}
+
+.type-cargo h3,
+.delivery-methods__china h3,
+.delivery-methods__rus h3,
+.insurance-cargo h3 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+  margin-bottom: 16px;
+}
+
+.type-cargo p,
+.delivery-methods__china p,
+.delivery-methods__rus p,
+.insurance-cargo p {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.type-cargo form {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 60px;
+}
+
+.radio-text {
+  font-family: "Mulish";
+}
+
+.radio-text p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.radio-text span {
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(159, 164, 175);
+}
+
+.delivery-methods {
+  display: flex;
+  gap: 0 24px;
+}
+
+.delivery-methods__china form,
+.delivery-methods__rus form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  margin-top: 32px;
+}
+
+.delivery-methods__china,
+.delivery-methods__rus {
+  max-width: 588px;
+  width: 100%;
+  height: 440px;
+}
+
+.delivery-methods__china p a,
+.delivery-methods__rus p a {
+  color: rgb(54, 106, 220);
+}
+
+.insurance-cargo p {
+  margin-bottom: 30px;
+}
+
+.checkout-stage-two .attention {
+  margin-top: 24px;
+}
+
+.stage-two {
+  display: flex;
+  gap: 0 24px;
+}
+
+.stage-two button:nth-child(1) {
+  background-color: rgb(171, 197, 255);
+  color: rgb(40, 40, 44);
+}
+
+/* Стили для попапа использования сохраненных данных */
+
+.use-data__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  border-radius: 40px;
+  padding: 72px 100px 72px 40px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.use-data__inner::-webkit-scrollbar {
+  width: 0;
+}
+
+.use-data__inner .saved-data__box {
+  background-color: #fff;
+}
+
+.use-data__inner:nth-child(1) .saved-data__box {
+  margin-bottom: 24px;
+}
+
+.use-data__inner h3 {
+  margin-bottom: 56px;
+}
+
+.use-data__footer {
+  display: flex;
+  align-items: center;
+  margin-top: 72px;
+  gap: 0 24px;
+}
+
+.use-data__footer button {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background-color: rgb(159, 164, 175);
+  color: #fff;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+  border: none;
+}
+
+.use-data__footer .add-more-product {
+  margin-top: unset;
+}
+
+/* Стили для страницы оформления заказа - 3 этап */
+
+.summary-field__inner {
+  max-width: 690px;
+  padding: 40px;
+}
+
+.summary-price {
+  max-width: 486px;
+  padding: 40px;
+  position: static;
+}
+
+.summary-data {
+  margin-top: 57px;
+  display: flex;
+  gap: 0 24px;
+}
+
+.saved-data__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.saved-data__header h3 {
+  font-family: "BaronNeue";
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.saved-data__header p {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.saved-data__header p span {
+  font-weight: 700;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+  color: rgb(54, 106, 220);
+  margin-left: 12px;
+}
+
+.summary-field .saved-data__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 0;
+}
+
+.summary-price h3 {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Mulish";
+  margin-bottom: 24px;
+}
+
+.summary-price h3 span {
+  color: rgb(54, 106, 220);
+  margin-left: 12px;
+}
+
+.summary-price__attention {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 16px;
+}
+
+.summary-price__attention p {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.agreement .checkbox + label:before {
+  background-color: transparent;
+}
+
+.agreement label a {
+  color: rgb(54, 106, 220);
+  text-decoration: underline;
+}
+
+.agreement {
+  margin-top: 24px;
+}
+
+.send-for-review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 32px;
+}
+
+.add-product {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.change-recipient {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.stage-three__footer {
+  font-family: "Mulish";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.stage-three__footer-inner {
+  max-width: 412px;
+}
+
+.stage-three__footer p {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 16px;
+}
+
+.stage-three__footer a {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(54, 106, 220);
+}
+
+/* Стили для оформления груза (пустой заказ) */
+
+.add-cargo {
+  display: flex;
+  justify-content: center;
+}
+
+.add-cargo__inner {
+  border-radius: 40px;
+  max-width: 996px;
+  padding: 76px 141px;
+  background-color: rgb(243, 243, 246);
+  margin-bottom: 56px;
+}
+
+.add-cargo h3 {
+  font-family: "BaronNeue";
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.empty-order__inner .checkout__stages {
+  margin-bottom: 56px;
+}
+
+.add-cargo__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.add-cargo__btn p {
+  font-family: "Mulish";
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(54, 106, 220);
+  margin-left: 8px;
+}
+
+/* Стили для оформления груза с добвленным товаром */
+
+.added-goods__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.added-goods__inner .checkout__header,
+.added-goods__inner .checkout__products {
+  max-width: 792px;
+  width: 100%;
+}
+
+.added-goods__inner .product__quantity-and-price {
+  height: 24px;
+  align-items: center;
+}
+
+.added-goods__inner .product-main__info {
+  align-items: flex-start;
+}
+
+.added-goods__inner .product__brief h4 {
+  background-color: transparent;
+}
+
+.added-goods__inner .next-step {
+  margin-top: 56px;
+}

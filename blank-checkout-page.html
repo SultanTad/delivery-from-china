@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/mobile-styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/43baaa64c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <div class="box-logos">
+              <a href="/"
+                ><img src="/assets/images/Tao585.webp" alt="" class="logo"
+              /></a>
+              <div class="burger-icon">
+                <img src="/assets/images/burger.svg" alt="" />
+              </div>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <p>О нас</p>
+                <img src="/assets/images/arrow-down.svg" alt="" />
+              </li>
+              <li class="menu__item">
+                <p>Помощь</p>
+                <img src="/assets/images/arrow-down.svg" alt="" />
+              </li>
+              <li class="menu__item">Доставка</li>
+              <li class="menu__item">Оплата</li>
+              <li class="menu__item">Карго</li>
+              <li class="menu__item">Новости</li>
+            </ul>
+            <div class="nav__inner">
+              <div class="exchange-rates">
+                <p>1 ¥ = <span>12,53 ₽</span></p>
+                <p>1 $ = <span>92,02 ₽</span></p>
+              </div>
+              <div class="log-in">
+                <img src="/assets/images/log-in.svg" alt="" />
+                <p>Войти</p>
+              </div>
+            </div>
+            <div class="mobile-menu">
+              <div class="mobile-menu__close">
+                <i
+                  class="fa-solid fa-xmark"
+                  style="
+                    font-size: 35px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 24px 16px;
+                    display: flex;
+                    align-items: center;
+                  "
+                ></i>
+              </div>
+              <ul class="mobile-menu__list">
+                <li class="menu__item">
+                  <a href="">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Помощь</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Доставка</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Оплата</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Карго</a>
+                </li>
+                <li class="menu__item">
+                  <a href="">Новости</a>
+                </li>
+              </ul>
+              <div class="mobile-nav__inner">
+                <div class="mobile-exchange-rates">
+                  <p>1 ¥ = <span>12,53 ₽</span></p>
+                  <p>1 $ = <span>92,02 ₽</span></p>
+                </div>
+                <div class="log-in">
+                  <img src="/assets/images/log-in.svg" alt="" />
+                  <p>Войти</p>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <section class="blank-checkout-page">
+          <div class="container">
+            <div class="blank-checkout__inner">
+              <h2>оформление заказа</h2>
+              <div class="checkout__stages">
+                <div class="stages__block active-stage">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/order-list.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>состав заказа</p>
+                  </div>
+                </div>
+                <div class="stages__block">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/geo-icon.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>адрес доставки</p>
+                  </div>
+                </div>
+                <div class="stages__block">
+                  <div class="image-wrapper">
+                    <img src="/assets/images/confirm-order.svg" alt="" />
+                  </div>
+                  <div class="stages__block-text">
+                    <p>подтверждение заказа</p>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__add-product">
+                <h3>добавьте товар для оформления доставки</h3>
+                <p>
+                  добавьте в поле ссылку на товар, с сайта
+                  <a href="">taobao.com</a> / <a href="">tmall.com</a> /
+                  <a href="">JD.com</a>
+                </p>
+                <form>
+                  <input
+                    type="text"
+                    placeholder="Вставьте ссылку товара или введите запрос для поиска"
+                  />
+                  <button>Добавить</button>
+                </form>
+              </div>
+              <div class="attention">
+                <img src="/assets/images/attention.svg" alt="" />
+                <p>
+                  Подробнее о том, как оформить заказ, можно узнать на
+                  <span>странице помощи</span>
+                </p>
+              </div>
+              <div class="next-step">
+                <button>
+                  <a href="">Следующий шаг</a>
+                </button>
+              </div>
+              <div class="mobile-stages__block">
+                <div class="image-wrapper">
+                  <img src="/assets/images/geo-icon.svg" alt="" />
+                </div>
+                <div class="stages__block-text">
+                  <p>адрес доставки</p>
+                </div>
+              </div>
+              <div class="mobile-stages__block">
+                <div class="image-wrapper">
+                  <img src="/assets/images/confirm-order.svg" alt="" />
+                </div>
+                <div class="stages__block-text">
+                  <p>подтверждение заказа</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-wrapper">
+            <ul class="footer__inner">
+              <div class="footer__logo">
+                <img src="/assets/images/Tao585.webp" alt="" />
+              </div>
+              <li>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item">
+                    <a href="">О нас</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Помощь</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Доставка</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Карго</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Выкуп</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a href="">Новости</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__exchange-rates footer-order">
+                <dl>
+                  <div class="exchange-rates__box">
+                    <dt>Текущий курс</dt>
+                    <dd>1 ¥ = <span>12,53 ₽</span></dd>
+                    <dd>1 $ = <span>92,02 ₽</span></dd>
+                  </div>
+                  <dd>
+                    <img src="/assets/images/currency-chart.svg" alt="" />
+                  </dd>
+                </dl>
+              </li>
+              <li class="footer__work-time">
+                <dl>
+                  <dt>Время работы</dt>
+                  <dd>Москва</dd>
+                  <dd class="work-time__box">
+                    <p>Пн-Сб с 09:00 до 18:00</p>
+                    <p>Вс - выходной</p>
+                  </dd>
+                  <dd>Китай</dd>
+                  <dd class="work-time__box">
+                    <p>Пн-Сб с 09:00 до 18:00</p>
+                    <p>Вс - выходной</p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="footer__contact-us">
+                <dl>
+                  <dt>Связаться с нами</dt>
+                  <dd>
+                    <p>Номер в России</p>
+                    <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+                  </dd>
+                  <dd>
+                    <p>Номер в Китае</p>
+                    <a href="tel:+8699999999999">+86 99999999999</a>
+                  </dd>
+                  <dd>
+                    <a href="mailto:chinatao@mail.com">chinatao@mail.com</a>
+                  </dd>
+                </dl>
+                <ul class="social__list">
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/inst.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/telegram.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/vk.svg" alt="" />
+                    </a>
+                  </li>
+                  <li class="social__list-item">
+                    <a href="">
+                      <img src="/assets/images/social-network.svg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="copyright">© China-Tao 2024 все права защищены</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

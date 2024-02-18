@@ -1,0 +1,15 @@
+<svg width="32.000000" height="32.000000" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip23_3351">
+			<rect id="message" width="16.000000" height="16.000000" transform="translate(8.000000 8.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<path id="bg" d="M0 5C0 2.23877 2.23877 0 5 0L27 0C29.7612 0 32 2.23877 32 5L32 27C32 29.7612 29.7612 32 27 32L5 32C2.23877 32 0 29.7612 0 27L0 5Z" fill="#FB902E" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<rect id="message" width="16.000000" height="16.000000" transform="translate(8.000000 8.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip23_3351)">
+		<path id="Vector" d="M12.3037 20.6665L9.3335 23L9.3335 10.6665C9.3335 10.4897 9.40381 10.3203 9.52881 10.1953C9.65381 10.0703 9.82324 10 10 10L22 10C22.1768 10 22.3467 10.0703 22.4717 10.1953C22.5967 10.3203 22.667 10.4897 22.667 10.6665L22.667 20C22.667 20.1768 22.5967 20.3462 22.4717 20.4712C22.3467 20.5962 22.1768 20.6665 22 20.6665L12.3037 20.6665ZM12.667 14.6665L12.667 16L14 16L14 14.6665L12.667 14.6665ZM15.3335 14.6665L15.3335 16L16.667 16L16.667 14.6665L15.3335 14.6665ZM18 14.6665L18 16L19.3335 16L19.3335 14.6665L18 14.6665Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
