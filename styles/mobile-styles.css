@@ -1,6 +1,6 @@
 @media (max-width: 1240px) {
   .testimonials-slider {
-  padding-left: 40px;
+    padding-left: 40px;
   }
 }
 @media (max-width: 1140px) {
@@ -32,7 +32,6 @@
   .stages__list-block {
     max-width: 100%;
   }
-
 }
 
 @media (max-width: 1065px) {
@@ -72,7 +71,7 @@
   .btn-box a:nth-child(1):hover button {
     background-color: rgb(38, 86, 192);
   }
-  
+
   .btn-box a:nth-child(2):hover button {
     background-color: rgb(126, 155, 219);
   }
@@ -81,13 +80,22 @@
     background-color: rgb(54, 106, 220);
   }
 
-  .services__item svg:hover path{
+  .services__item svg:hover path {
     fill: #fff;
     stroke: #fff;
   }
 
   .menu__item a:hover {
     color: rgb(54, 106, 220);
+  }
+
+  .footer__nav-list li a:hover {
+    color: rgb(54, 106, 220);
+  }
+
+  .info-square:hover ~ .mini-pop-up,
+  .info-square:hover ~ .mini-pop-up2 {
+    display: block;
   }
 }
 
@@ -120,7 +128,6 @@
   .personal-data__contacts .address {
     width: unset;
   }
-
 }
 
 @media (max-width: 860px) {
@@ -225,7 +232,7 @@
   .add-cargo h3 {
     text-align: center;
   }
-  
+
   .item2 {
     width: 60%;
   }
@@ -384,7 +391,7 @@
     font-size: 32px;
     line-height: 32px;
   }
-  
+
   .services__list {
     grid-template-columns: 1fr;
   }
@@ -504,7 +511,6 @@
   .news__header button {
     display: none;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -717,9 +723,9 @@
   .news__inner .news__list {
     grid-template-columns: 1fr;
     gap: 24px 0;
-    overflow-x: unset ;
+    overflow-x: unset;
   }
-  
+
   .news__item {
     max-width: 382px;
     width: unset;

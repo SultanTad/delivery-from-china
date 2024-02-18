@@ -87,7 +87,6 @@ if (tabs) {
     console.log(e.target);
     if (e.target.classList.contains("tabs__btn")) {
       const tabsPath = e.target.dataset.tabsPath;
-      console.log(tabsPath);
       tabsHandler(tabsPath);
     }
   });

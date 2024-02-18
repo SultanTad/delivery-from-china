@@ -246,8 +246,8 @@ p {
 
 .why-choose-us__item.animation-class {
   opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .why-choose-us__item.animation-class:nth-child(2) {
@@ -310,13 +310,13 @@ p {
 .stages-item {
   opacity: 0;
   transform: translateY(50px);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .stages-item.animation-class {
   opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .stages-item.animation-class:nth-child(2) {
@@ -394,13 +394,13 @@ p {
 .our-specialists__item {
   opacity: 0;
   transform: translateY(50px);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .our-specialists__item.animation-class {
   opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .our-specialists__item.animation-class:nth-child(2) {
@@ -418,7 +418,6 @@ p {
 .our-specialists__item.animation-class:nth-child(6) {
   transition-delay: 0.8s;
 }
-
 
 .our-specialists__item img {
   margin-bottom: -38px;
@@ -467,8 +466,6 @@ p {
   padding-left: calc((100% - 1200px) / 2);
 }
 
-
-
 .testimonials-slide {
   display: flex;
   flex-direction: column;
@@ -511,13 +508,13 @@ p {
 .services__item {
   opacity: 0;
   transform: translateY(50px);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .services__item.animation-class {
   opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .services__item.animation-class:nth-child(2) {
@@ -541,7 +538,6 @@ p {
 .services__item.animation-class:nth-child(8) {
   transition-delay: 1s;
 }
-
 
 .services__item {
   padding: 24px 32px;
@@ -661,13 +657,13 @@ p {
   width: 384px;
   opacity: 0;
   transform: translateY(50px);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .news__inner .news__item.animation-class {
   opacity: 1;
-	transform: translateY(0);
-	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .news__inner .news__item.animation-class:nth-child(2) {
@@ -676,8 +672,6 @@ p {
 .news__inner .news__item.animation-class:nth-child(3) {
   transition-delay: 0.5s;
 }
-
-
 
 .news__list::-webkit-scrollbar {
   height: 0;
@@ -910,6 +904,49 @@ p {
   gap: 12px 0;
 }
 
+.personal-info__block div img {
+  cursor: pointer;
+}
+
+.personal-info__block div .mini-pop-up {
+  top: 25px;
+  right: -118px;
+}
+
+.personal-info__block div .mini-pop-up2 {
+  top: 25px;
+  right: -229px;
+}
+
+.personal-info__block div .mini-pop-up,
+.personal-info__block div .mini-pop-up2 {
+  display: none;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 12px;
+  font-family: "Mulish";
+  font-weight: 400;
+  line-height: 15px;
+  color: rgb(40, 40, 44);
+  max-width: 242px;
+  position: absolute;
+  z-index: 200;
+}
+
+.triangle {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: inherit;
+  border: inherit;
+  position: absolute;
+  top: -6px;
+  left: 7px;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0 0 0.25em;
+}
+
 .personal-info__inner h3 {
   font-weight: 700;
   font-size: 18px;
@@ -919,8 +956,9 @@ p {
 
 .personal-info__block div {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0 8px;
+  position: relative;
 }
 
 .personal-info__block div span {
@@ -1071,6 +1109,14 @@ p {
 
 .tabs__btn--active {
   color: rgb(54, 106, 220);
+}
+
+.tabs__btn--active path {
+  stroke: rgb(54, 106, 220);
+}
+
+.tabs__btn--active circle {
+  stroke: rgb(54, 106, 220);
 }
 
 .yours-orders {
