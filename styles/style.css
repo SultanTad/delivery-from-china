@@ -1,6 +1,6 @@
 @font-face {
   font-family: "BaronNeue";
-  src: url(/assets/fonts/Baron\ Neue.otf);
+  src: url(./assets/fonts/Baron\ Neue.otf);
 }
 
 h1,
@@ -124,7 +124,7 @@ p {
 }
 
 .promo {
-  background-image: url(/assets/images/promo.webp);
+  background-image: url(./assets/images/promo.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1641,12 +1641,12 @@ input[type="radio"] {
 .rus-radio-btn2:checked + label::before,
 .rus-radio-btn3:checked + label::before,
 .insurance-radio-btn1:checked + label::before {
-  content: url(/assets/images/radio-ellipse.svg);
+  content: url(./assets/images/radio-ellipse.svg);
   border: 1px solid rgb(54, 106, 220);
 }
 
 .checkbox:checked + label:before {
-  content: url(/assets/images/checkbox.svg);
+  content: url(./assets/images/checkbox.svg);
   border: 1px solid rgb(54, 106, 220);
 }
 
@@ -1705,7 +1705,7 @@ input[type="radio"] {
 }
 
 .choices[data-type*="select-one"]:after {
-  content: url(/assets/images/Down-in-select.svg);
+  content: url(./assets/images/Down-in-select.svg);
   border-style: unset;
   right: 29px;
   top: 40%;
