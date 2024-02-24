@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/mobile-styles.css" />
 
+    <script src="https://code.highcharts.com/highcharts.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script
@@ -237,9 +238,12 @@
                       </div>
                     </div>
                     <div class="use-data__footer">
-                      <button>Использовать данные</button>
+                      <button class="use-btn">Использовать данные</button>
                       <div class="add-more-product">
-                        <img src="./assets/images/add-product-plus.svg" alt="">
+                        <img
+                          src="./assets/images/add-product-plus.svg"
+                          alt=""
+                        />
                         <p>Добавить новые данные</p>
                       </div>
                     </div>
@@ -451,14 +455,13 @@
                   <div class="form-item">
                     <div class="radio-box">
                       <input
-                        type="radio"
+                        type="checkbox"
                         class="insurance-radio-btn1"
                         id="insurance-radio-btn1"
                       />
-                      <label for="insurance-radio-btn1"></label>
-                    </div>
-                    <div class="radio-text">
-                      <p>Экспресс доставка</p>
+                      <label for="insurance-radio-btn1"
+                        >Застраховать груз</label
+                      >
                     </div>
                   </div>
                 </form>
@@ -471,12 +474,12 @@
                 </p>
               </div>
               <div class="next-step stage-two">
-                <button>
-                  <a href="">Вернуться назад</a>
-                </button>
-                <button>
-                  <a href="">Подтвердить</a>
-                </button>
+                <a href="checkout-stage-one.html">
+                  <button class="goback">Вернуться назад</button>
+                </a>
+                <a href="checkout-stage-three.html">
+                  <button class="confirm-btn">Подтвердить</button>
+                </a>
               </div>
               <div class="mobile-stages__block">
                 <div class="image-wrapper">
@@ -527,7 +530,7 @@
                     <dd>1 $ = <span>92,02 ₽</span></dd>
                   </div>
                   <dd>
-                    <img src="./assets/images/currency-chart.svg" alt="" />
+                    <div id="container"></div>
                   </dd>
                 </dl>
               </li>

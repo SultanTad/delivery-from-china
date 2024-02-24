@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/mobile-styles.css" />
 
+    <script src="https://code.highcharts.com/highcharts.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script
@@ -213,7 +214,18 @@
                   <img src="./assets/images/use-data-icon.svg" alt="" />
                   <p>Изменить получателя</p>
                 </div>
-                <button><a href="#">Отправить на проверку</a></button>
+                <button class="send-to-review">Отправить на проверку</button>
+              </div>
+              <div class="review__pop-up">
+                <div class="review__inner">
+                  <img class="pop-up__close-btn" src="./assets/images/close-pop-up.svg" alt="" />
+                  <h3>Вы собираетесь отправить заказ на проверку</h3>
+                  <p>После подтверждения, редактировать заказ будет невозможно</p>
+                  <div class="review__btns">
+                    <button>Подтвердить действие</button>
+                    <p>Отменить</p>
+                  </div>
+                </div>
               </div>
               <div class="stage-three__footer">
                 <div class="stage-three__footer-inner">
@@ -265,7 +277,7 @@
                     <dd>1 $ = <span>92,02 ₽</span></dd>
                   </div>
                   <dd>
-                    <img src="./assets/images/currency-chart.svg" alt="" />
+                    <div id="container"></div>
                   </dd>
                 </dl>
               </li>

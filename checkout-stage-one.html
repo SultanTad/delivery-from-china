@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/mobile-styles.css" />
 
+    <script src="https://code.highcharts.com/highcharts.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script
@@ -162,24 +163,44 @@
               </div>
               <div class="checkout__products">
                 <div class="checkout__product">
-                  <div class="product-main__info">
-                    <div class="edit-icons__product mobile-block">
-                      <img src="./assets/images/edit-product.svg" alt="" />
-                      <img src="./assets/images/delete-product.svg" alt="" />
-                      <img src="./assets/images/copy-product.svg" alt="" />
-                      <img src="./assets/images/send-product.svg" alt="" />
-                    </div>
-                    <div class="product__img">
-                      <img
-                        class="product-main__img"
-                        src="./assets/images/checkout-product.webp"
-                        alt=""
-                      />
-                      <div class="edit-icons__product">
-                        <img src="./assets/images/edit-product.svg" alt="" />
-                        <img src="./assets/images/delete-product.svg" alt="" />
-                        <img src="./assets/images/copy-product.svg" alt="" />
-                        <img src="./assets/images/send-product.svg" alt="" />
+                  <div class="edit-icons__product desctop-block">
+                    <img
+                      class="edit-product"
+                      src="./assets/images/edit-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="delete-product"
+                      src="./assets/images/delete-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="copy-product"
+                      src="./assets/images/copy-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="send-product"
+                      src="./assets/images/send-product.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="checkout__product__inner">
+                    <div class="product-main__info">
+                      <div class="product__img">
+                        <img
+                          class="product-main__img"
+                          src="./assets/images/checkout-product.webp"
+                          alt=""
+                        />
+                        <div class="product__brief">
+                          <h4>义乌市胜美化妆品有限公司实力供应商</h4>
+                          <p class="product__brief-text">
+                            花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
+                          </p>
+                          <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                          <p>净含量 <span>50ml</span></p>
+                        </div>
                       </div>
                       <div class="product__brief">
                         <h4>义乌市胜美化妆品有限公司实力供应商</h4>
@@ -190,34 +211,12 @@
                         <p>净含量 <span>50ml</span></p>
                       </div>
                     </div>
-                    <div class="product__brief">
-                      <h4>义乌市胜美化妆品有限公司实力供应商</h4>
-                      <p class="product__brief-text">
-                        花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
-                      </p>
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                  </div>
-                  <div class="mobile-product__toggle">
-                    <div class="left-block">
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                    <div class="right-block">
-                      <button>
-                        <img src="./assets/images/Minus-toggle.svg" alt="" />
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button>
-                        <img src="./assets/images/Plus-toggle.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product__quantity-and-price">
-                    <div class="product__toggle">
-                      <div class="mobile-header">Кол-во</div>
-                      <div class="product__toggle-inner">
+                    <div class="mobile-product__toggle">
+                      <div class="left-block">
+                        <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                        <p>净含量 <span>50ml</span></p>
+                      </div>
+                      <div class="right-block">
                         <button>
                           <img src="./assets/images/Minus-toggle.svg" alt="" />
                         </button>
@@ -227,50 +226,87 @@
                         </button>
                       </div>
                     </div>
-                    <div class="product__price">
-                      <div class="price-box">
-                        <div class="mobile-header">Сумма</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                    <div class="product__quantity-and-price">
+                      <div class="product__toggle">
+                        <div class="mobile-header">Кол-во</div>
+                        <div class="product__toggle-inner">
+                          <button>
+                            <img
+                              src="./assets/images/Minus-toggle.svg"
+                              alt=""
+                            />
+                          </button>
+                          <input type="text" placeholder="1" />
+                          <button>
+                            <img src="./assets/images/Plus-toggle.svg" alt="" />
+                          </button>
+                        </div>
                       </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Доставка</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Услуги</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Итого</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                      <div class="product__price">
+                        <div class="price-box">
+                          <div class="mobile-header">Сумма</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Доставка</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Услуги</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Итого</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="checkout__product">
-                  <div class="product-main__info">
-                    <div class="edit-icons__product mobile-block">
-                      <img src="./assets/images/edit-product.svg" alt="" />
-                      <img src="./assets/images/delete-product.svg" alt="" />
-                      <img src="./assets/images/copy-product.svg" alt="" />
-                      <img src="./assets/images/send-product.svg" alt="" />
-                    </div>
-                    <div class="product__img">
-                      <img
-                        class="product-main__img"
-                        src="./assets/images/checkout-product.webp"
-                        alt=""
-                      />
-                      <div class="edit-icons__product">
-                        <img src="./assets/images/edit-product.svg" alt="" />
-                        <img src="./assets/images/delete-product.svg" alt="" />
-                        <img src="./assets/images/copy-product.svg" alt="" />
-                        <img src="./assets/images/send-product.svg" alt="" />
+                  <div class="edit-icons__product desctop-block">
+                    <img
+                      class="edit-product"
+                      src="./assets/images/edit-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="delete-product"
+                      src="./assets/images/delete-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="copy-product"
+                      src="./assets/images/copy-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="send-product"
+                      src="./assets/images/send-product.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="checkout__product__inner">
+                    <div class="product-main__info">
+                      <div class="product__img">
+                        <img
+                          class="product-main__img"
+                          src="./assets/images/checkout-product.webp"
+                          alt=""
+                        />
+                        <div class="product__brief">
+                          <h4>义乌市胜美化妆品有限公司实力供应商</h4>
+                          <p class="product__brief-text">
+                            花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
+                          </p>
+                          <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                          <p>净含量 <span>50ml</span></p>
+                        </div>
                       </div>
                       <div class="product__brief">
                         <h4>义乌市胜美化妆品有限公司实力供应商</h4>
@@ -281,34 +317,12 @@
                         <p>净含量 <span>50ml</span></p>
                       </div>
                     </div>
-                    <div class="product__brief">
-                      <h4>义乌市胜美化妆品有限公司实力供应商</h4>
-                      <p class="product__brief-text">
-                        花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
-                      </p>
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                  </div>
-                  <div class="mobile-product__toggle">
-                    <div class="left-block">
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                    <div class="right-block">
-                      <button>
-                        <img src="./assets/images/Minus-toggle.svg" alt="" />
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button>
-                        <img src="./assets/images/Plus-toggle.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product__quantity-and-price">
-                    <div class="product__toggle">
-                      <div class="mobile-header">Кол-во</div>
-                      <div class="product__toggle-inner">
+                    <div class="mobile-product__toggle">
+                      <div class="left-block">
+                        <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                        <p>净含量 <span>50ml</span></p>
+                      </div>
+                      <div class="right-block">
                         <button>
                           <img src="./assets/images/Minus-toggle.svg" alt="" />
                         </button>
@@ -318,50 +332,87 @@
                         </button>
                       </div>
                     </div>
-                    <div class="product__price">
-                      <div class="price-box">
-                        <div class="mobile-header">Сумма</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                    <div class="product__quantity-and-price">
+                      <div class="product__toggle">
+                        <div class="mobile-header">Кол-во</div>
+                        <div class="product__toggle-inner">
+                          <button>
+                            <img
+                              src="./assets/images/Minus-toggle.svg"
+                              alt=""
+                            />
+                          </button>
+                          <input type="text" placeholder="1" />
+                          <button>
+                            <img src="./assets/images/Plus-toggle.svg" alt="" />
+                          </button>
+                        </div>
                       </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Доставка</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Услуги</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Итого</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                      <div class="product__price">
+                        <div class="price-box">
+                          <div class="mobile-header">Сумма</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Доставка</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Услуги</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Итого</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <hr>
+                <hr />
                 <div class="checkout__product">
-                  <div class="product-main__info">
-                    <div class="edit-icons__product mobile-block">
-                      <img src="./assets/images/edit-product.svg" alt="" />
-                      <img src="./assets/images/delete-product.svg" alt="" />
-                      <img src="./assets/images/copy-product.svg" alt="" />
-                      <img src="./assets/images/send-product.svg" alt="" />
-                    </div>
-                    <div class="product__img">
-                      <img
-                        class="product-main__img"
-                        src="./assets/images/checkout-product.webp"
-                        alt=""
-                      />
-                      <div class="edit-icons__product">
-                        <img src="./assets/images/edit-product.svg" alt="" />
-                        <img src="./assets/images/delete-product.svg" alt="" />
-                        <img src="./assets/images/copy-product.svg" alt="" />
-                        <img src="./assets/images/send-product.svg" alt="" />
+                  <div class="edit-icons__product desctop-block">
+                    <img
+                      class="edit-product"
+                      src="./assets/images/edit-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="delete-product"
+                      src="./assets/images/delete-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="copy-product"
+                      src="./assets/images/copy-product.svg"
+                      alt=""
+                    />
+                    <img
+                      class="send-product"
+                      src="./assets/images/send-product.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="checkout__product__inner">
+                    <div class="product-main__info">
+                      <div class="product__img">
+                        <img
+                          class="product-main__img"
+                          src="./assets/images/checkout-product.webp"
+                          alt=""
+                        />
+                        <div class="product__brief">
+                          <h4>义乌市胜美化妆品有限公司实力供应商</h4>
+                          <p class="product__brief-text">
+                            花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
+                          </p>
+                          <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                          <p>净含量 <span>50ml</span></p>
+                        </div>
                       </div>
                       <div class="product__brief">
                         <h4>义乌市胜美化妆品有限公司实力供应商</h4>
@@ -372,34 +423,12 @@
                         <p>净含量 <span>50ml</span></p>
                       </div>
                     </div>
-                    <div class="product__brief">
-                      <h4>义乌市胜美化妆品有限公司实力供应商</h4>
-                      <p class="product__brief-text">
-                        花基品西梅红茶茉莉白柚柠檬白茶女士学生自然持久淡香水50ml批发
-                      </p>
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                  </div>
-                  <div class="mobile-product__toggle">
-                    <div class="left-block">
-                      <p>颜色分类 <span>HJP005西梅红茶</span></p>
-                      <p>净含量 <span>50ml</span></p>
-                    </div>
-                    <div class="right-block">
-                      <button>
-                        <img src="./assets/images/Minus-toggle.svg" alt="" />
-                      </button>
-                      <input type="text" placeholder="1" />
-                      <button>
-                        <img src="./assets/images/Plus-toggle.svg" alt="" />
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product__quantity-and-price">
-                    <div class="product__toggle">
-                      <div class="mobile-header">Кол-во</div>
-                      <div class="product__toggle-inner">
+                    <div class="mobile-product__toggle">
+                      <div class="left-block">
+                        <p>颜色分类 <span>HJP005西梅红茶</span></p>
+                        <p>净含量 <span>50ml</span></p>
+                      </div>
+                      <div class="right-block">
                         <button>
                           <img src="./assets/images/Minus-toggle.svg" alt="" />
                         </button>
@@ -409,45 +438,259 @@
                         </button>
                       </div>
                     </div>
-                    <div class="product__price">
-                      <div class="price-box">
-                        <div class="mobile-header">Сумма</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                    <div class="product__quantity-and-price">
+                      <div class="product__toggle">
+                        <div class="mobile-header">Кол-во</div>
+                        <div class="product__toggle-inner">
+                          <button>
+                            <img
+                              src="./assets/images/Minus-toggle.svg"
+                              alt=""
+                            />
+                          </button>
+                          <input type="text" placeholder="1" />
+                          <button>
+                            <img src="./assets/images/Plus-toggle.svg" alt="" />
+                          </button>
+                        </div>
                       </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Доставка</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Услуги</div>
-                        <p>¥ 0.00</p>
-                        <span>₽ 0.00</span>
-                      </div>
-                      <div class="price-box">
-                        <div class="mobile-header">Итого</div>
-                        <p>¥ 6.00</p>
-                        <span>₽ 79.00</span>
+                      <div class="product__price">
+                        <div class="price-box">
+                          <div class="mobile-header">Сумма</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Доставка</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Услуги</div>
+                          <p>¥ 0.00</p>
+                          <span>₽ 0.00</span>
+                        </div>
+                        <div class="price-box">
+                          <div class="mobile-header">Итого</div>
+                          <p>¥ 6.00</p>
+                          <span>₽ 79.00</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="add-more-product">
-                  <img src="./assets/images/add-product-plus.svg" alt="">
+                  <img src="./assets/images/add-product-plus.svg" alt="" />
                   <p>Добавить еще товар</p>
+                </div>
+              </div>
+              <div class="send__pop-up">
+                <div class="send__inner">
+                  <img
+                    class="pop-up__close-btn"
+                    src="./assets/images/close-pop-up.svg"
+                    alt=""
+                  />
+                  <h3>перемещение позиции</h3>
+                  <p>Выберите заказ ниже для добавления позиии в него</p>
+                  <div class="product-data">
+                    <div class="product-data__blocks">
+                      <div class="product-data__block">
+                        <p>ID заказа</p>
+                        <p>1365</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Дата</p>
+                        <p>03.08.2023 / 12:46</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Позиций</p>
+                        <p>20</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Общая стоиомсть</p>
+                        <div class="product-price">
+                          <p>¥ 50.47</p>
+                          <p>₽ 671.25</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images">
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                    </div>
+                  </div>
+                  <div class="product-data">
+                    <div class="product-data__blocks">
+                      <div class="product-data__block">
+                        <p>ID заказа</p>
+                        <p>1365</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Дата</p>
+                        <p>03.08.2023 / 12:46</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Позиций</p>
+                        <p>20</p>
+                      </div>
+                      <div class="product-data__block">
+                        <p>Общая стоиомсть</p>
+                        <div class="product-price">
+                          <p>¥ 50.47</p>
+                          <p>₽ 671.25</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images">
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                      <img src="./assets/images/product-image.webp" alt="" />
+                    </div>
+                  </div>
+                  <button class="send-btn">Переместить</button>
+                </div>
+              </div>
+              <div class="add__pop-up">
+                <div class="add__inner">
+                  <img
+                    class="pop-up__close-btn"
+                    src="./assets/images/close-pop-up.svg"
+                    alt=""
+                  />
+                  <h3>укажите параметры позиции</h3>
+                  <form>
+                    <input
+                      class="input-1"
+                      type="text"
+                      value="http://detail.tmall.com/item.htm?id=716688013846"
+                    />
+                    <p class="input-2">
+                      Добавьте в поле ссылку на товар, с сайта
+                      <a href="#">taobao.com</a> / <a href="#">tmall.com</a> /
+                      <a href="#">JD.com</a>
+                    </p>
+                    <input
+                      class="input-3"
+                      type="text"
+                      placeholder="Введите название товара"
+                    />
+                    <p class="input-4">
+                      Укажите название товара на китайском языке
+                    </p>
+                    <div class="form-input__blocks">
+                      <input
+                        class="input-5"
+                        type="text"
+                        placeholder="Укажите стоимость"
+                      />
+                      <input
+                        class="input-6"
+                        type="text"
+                        placeholder="Укажите размер"
+                      />
+                      <input
+                        class="input-7"
+                        type="text"
+                        placeholder="Доставка по Китаю"
+                      />
+                      <input
+                        class="input-8"
+                        type="text"
+                        placeholder="Укажите цвет"
+                      />
+                      <textarea
+                        class="input-9"
+                        placeholder="Укажите дополнительную информацию"
+                      ></textarea>
+                    </div>
+                  </form>
+                  <div class="product-summary">
+                    <div class="summary-box quantity-box">
+                      <div class="summary-box__inner">
+                        <p>Количество</p>
+                        <div class="product__toggle">
+                          <button>
+                            <img src="./assets/images/Minus-toggle.svg" alt="" />
+                          </button>
+                          <input type="text" placeholder="1" />
+                          <button>
+                            <img src="./assets/images/Plus-toggle.svg" alt="" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="summary-box">
+                      <p>Сумма</p>
+                      <p>¥ 0</p>
+                    </div>
+                    <div class="summary-box">
+                      <p>Доставка</p>
+                      <p>¥ 0</p>
+                    </div>
+                    <div class="summary-box">
+                      <p>Услуги</p>
+                      <p>¥ 0</p>
+                    </div>
+                    <div class="summary-box">
+                      <p>Итого</p>
+                      <p>¥ 5</p>
+                    </div>
+                  </div>
+                  <div class="add-product__images">
+                    <img
+                      src="./assets/images/Product default photo.webp"
+                      alt=""
+                    />
+                    <img src="./assets/images/Product photo.webp" alt="" />
+                  </div>
+                  <div class="additional-functions">
+                    <input type="checkbox" class="additional-functions__checkbox1" id="additional-functions__checkbox1" />
+                    <label for="additional-functions__checkbox1"
+                      >Нужен фотоотчет этого товара <span>+ ¥ 3</span></label
+                    >
+                    <input type="checkbox" class="additional-functions__checkbox2" id="additional-functions__checkbox2" />
+                    <label for="additional-functions__checkbox2"
+                      >Это хрупкий товар, нужна дополнительная упаковка
+                      <span>+ ¥ 10</span></label
+                    >
+                  </div>
+                  <div class="add-product__footer">
+                    <button>Добавить товар</button>
+                    <div class="add-product__attention">
+                      <img src="./assets/images/attention.svg" alt="" />
+                      <p>Сверяйте цены товара с источником при добавлении</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="review__pop-up">
+                <div class="review__inner">
+                  <img class="pop-up__close-btn" src="./assets/images/close-pop-up.svg" alt="" />
+                  <h3>Вы собираетесь отменить заказ</h3>
+                  <p>Заказ будет удален и восстановить его будет невозможно</p>
+                  <div class="review__btns">
+                    <button>Подтвердить действие</button>
+                    <p>Отменить</p>
+                  </div>
                 </div>
               </div>
               <div class="attention">
                 <img src="./assets/images/attention.svg" alt="" />
                 <p>
-                  Минимальная сумма заказа - 500 юаней! Пожалуйста, добавьте еще товары в заказ
+                  Минимальная сумма заказа - 500 юаней! Пожалуйста, добавьте еще
+                  товары в заказ
                 </p>
               </div>
               <div class="next-step stage-one">
-                <button>
-                  <a href="">Следующий шаг</a>
-                </button>
+                <a href="checkout-stage-two.html">
+                  <button>Следующий шаг</button>
+                </a>
               </div>
               <div class="mobile-stages__block">
                 <div class="image-wrapper">
@@ -506,7 +749,7 @@
                     <dd>1 $ = <span>92,02 ₽</span></dd>
                   </div>
                   <dd>
-                    <img src="./assets/images/currency-chart.svg" alt="" />
+                    <div id="container"></div>
                   </dd>
                 </dl>
               </li>

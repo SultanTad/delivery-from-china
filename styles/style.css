@@ -133,13 +133,13 @@ p {
 .promo__inner {
   min-height: 100dvh;
   font-family: "BaronNeue";
-  padding-top: 230px;
+  padding-top: 14.375rem;
 }
 
 .promo__content {
   display: flex;
   flex-direction: column;
-  max-width: 689px;
+  max-width: 43.0625rem;
 }
 
 .promo__inner h1,
@@ -148,15 +148,15 @@ p {
 }
 
 .promo__inner h1 {
-  font-size: 72px;
-  margin-bottom: 32px;
-  line-height: 72px;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  line-height: 4.5rem;
 }
 
 .promo__inner p {
-  font-size: 18px;
-  margin-bottom: 72px;
-  line-height: 23px;
+  font-size: 1.125rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.4375rem;
 }
 
 .btn-box {
@@ -171,18 +171,22 @@ p {
   background-color: rgb(54, 106, 220);
   color: #fff;
   border: none;
-  padding: 16px 30px;
+  padding: 1rem 1.875rem;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 1.125rem;
+  font-family: "Mulish";
 }
 
 .btn-box a:last-child button {
   background-color: rgb(171, 197, 255);
   color: rgb(40, 40, 44);
   border: none;
-  padding: 16px 30px;
+  padding: 1rem 1.875rem;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 1.125rem;
+  font-family: "Mulish";
 }
 
 .why-choose-us {
@@ -219,12 +223,13 @@ p {
   margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: flex-start;
   gap: 24px;
+  max-width: 1112px;
 }
 
 .why-choose-us__list img {
-  width: 242px;
+  width: 194px;
   object-fit: cover;
 }
 
@@ -233,10 +238,23 @@ p {
   background-color: rgb(243, 243, 246);
   border-radius: 40px;
   border: none;
-  width: 39%;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.item1,
+.item4 {
+  width: 40.5%;
+}
+
+.item4 {
+  margin-left: auto;
+}
+
+.item2,
+.item5 {
+  width: 32%;
 }
 
 .item3 {
@@ -303,8 +321,13 @@ p {
 .stages__list-block {
   display: flex;
   flex-direction: column;
-  gap: 48px 0;
   max-width: 486px;
+}
+
+.stages__list-block hr {
+  margin: 24px 0;
+  background-color: rgb(243, 243, 246);
+  border-top: unset;
 }
 
 .stages-item {
@@ -606,6 +629,7 @@ p {
   line-height: 23px;
   padding: 16px 30px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .help__footer {
@@ -758,7 +782,6 @@ p {
 }
 
 .footer__exchange-rates span {
-  display: block;
   color: rgb(54, 106, 220);
 }
 
@@ -770,11 +793,6 @@ p {
   line-height: 23px;
   font-family: "Mulish";
   margin-bottom: 20px;
-}
-
-.footer__exchange-rates dl dd {
-  display: flex;
-  gap: 4px 0;
 }
 
 .footer__exchange-rates dl dd img {
@@ -802,6 +820,12 @@ p {
 .social__list {
   display: flex;
   gap: 0 24px;
+}
+
+.copyright {
+  max-width: 135px;
+  line-height: 15px;
+  font-size: 12px;
 }
 
 /* Стили Страницы Личного профиля */
@@ -881,7 +905,7 @@ p {
 .personal-data__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 100px;
 }
 
@@ -890,8 +914,34 @@ p {
   gap: 0 20px;
 }
 
+.ava-block {
+  position: relative;
+}
+
+.image-filter {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.63);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  height: 100px;
+  border-radius: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
 .personal-avatar {
   width: 100px;
+}
+
+.personal-avatar-camera {
+  position: absolute;
+  left: 41px;
+  bottom: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .personal-info__inner,
@@ -967,7 +1017,7 @@ p {
 
 .personal-data__contacts {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -1029,6 +1079,19 @@ p {
   max-width: 588px;
   font-family: "Mulish";
   position: relative;
+}
+
+.use-data__inner .saved-data__box {
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.saved-data__box.active-saved-box {
+  border: 1px solid rgb(54, 106, 220);
+}
+
+.use-btn.active-btn {
+  background-color: rgb(54, 106, 220);
 }
 
 .delete__saved-data {
@@ -1348,7 +1411,9 @@ p {
 /* Стили для попапа новости */
 
 .news__pop-up,
-.use-data__pop-up {
+.use-data__pop-up,
+.send__pop-up,
+.add__pop-up {
   background: rgba(0, 0, 0, 0.63);
   position: fixed;
   top: 0;
@@ -1403,7 +1468,9 @@ p {
 }
 
 .news__pop-up.active_shadow,
-.use-data__pop-up.active_shadow {
+.use-data__pop-up.active_shadow,
+.send__pop-up.active_shadow,
+.add__pop-up.active_shadow {
   z-index: 999;
   opacity: 1;
   visibility: visible;
@@ -1411,7 +1478,9 @@ p {
 }
 
 .pop-up__inner.active_window,
-.use-data__inner.active_window {
+.use-data__inner.active_window,
+.send__inner.active_window,
+.add__inner.active_window {
   display: block;
 }
 
@@ -1480,7 +1549,9 @@ p {
 .new-data__pop-up form input,
 .checkout__add-product form input,
 .checkout-form form input,
-.checkout-form form textarea {
+.checkout-form form textarea,
+.add__inner form input,
+.add__inner form textarea {
   padding: 16px 20px;
   border-radius: 10px;
   background-color: #fff;
@@ -1499,6 +1570,7 @@ p {
   font-size: 18px;
   font-family: "Mulish";
   line-height: 23px;
+  cursor: pointer;
 }
 
 .change-pass__inner img {
@@ -1605,12 +1677,17 @@ input[type="radio"] {
 .rus-radio-btn1 + label,
 .rus-radio-btn2 + label,
 .rus-radio-btn3 + label,
-.insurance-radio-btn1 + label {
+.insurance-radio-btn1 + label,
+.additional-functions__checkbox1 + label,
+.additional-functions__checkbox2 + label {
   position: relative;
   cursor: pointer;
 }
 
-.checkbox + label:before {
+.checkbox + label:before,
+.additional-functions__checkbox1 + label:before,
+.additional-functions__checkbox2 + label:before,
+.insurance-radio-btn1 + label::before {
   content: "";
   position: absolute;
   font-size: 16px;
@@ -1641,8 +1718,7 @@ input[type="radio"] {
 .delivery-radio-btn3 + label::before,
 .rus-radio-btn1 + label::before,
 .rus-radio-btn2 + label::before,
-.rus-radio-btn3 + label::before,
-.insurance-radio-btn1 + label::before {
+.rus-radio-btn3 + label::before {
   top: 2px;
 }
 
@@ -1657,8 +1733,7 @@ input[type="radio"] {
 .delivery-radio-btn3 + label::before,
 .rus-radio-btn1 + label::before,
 .rus-radio-btn2 + label::before,
-.rus-radio-btn3 + label::before,
-.insurance-radio-btn1 + label::before {
+.rus-radio-btn3 + label::before {
   content: "";
   position: absolute;
   font-size: 16px;
@@ -1685,18 +1760,23 @@ input[type="radio"] {
 .delivery-radio-btn3:checked + label:before,
 .rus-radio-btn1:checked + label::before,
 .rus-radio-btn2:checked + label::before,
-.rus-radio-btn3:checked + label::before,
-.insurance-radio-btn1:checked + label::before {
+.rus-radio-btn3:checked + label::before {
   content: url(../assets/images/radio-ellipse.svg);
   border: 1px solid rgb(54, 106, 220);
 }
 
-.checkbox:checked + label:before {
+.checkbox:checked + label:before,
+.additional-functions__checkbox1:checked + label:before,
+.additional-functions__checkbox2:checked + label:before,
+.insurance-radio-btn1:checked + label::before {
   content: url(../assets/images/checkbox.svg);
   border: 1px solid rgb(54, 106, 220);
 }
 
-.checkbox + label {
+.checkbox + label,
+.additional-functions__checkbox1 + label,
+.additional-functions__checkbox2 + label,
+.insurance-radio-btn1 + label {
   padding-left: 32px;
   font-size: 16px;
   font-family: "Mulish";
@@ -1947,6 +2027,10 @@ input[type="radio"] {
   flex-direction: column;
 }
 
+.blank-checkout__inner {
+  align-items: center;
+}
+
 .blank-checkout__inner h2,
 .stage-one__inner h2,
 .stage-two__inner h2,
@@ -1956,7 +2040,7 @@ input[type="radio"] {
   font-family: "BaronNeue";
   font-size: 32px;
   line-height: 32px;
-  margin-bottom: 85px;
+  margin-bottom: 56px;
   text-align: center;
 }
 
@@ -1992,6 +2076,10 @@ input[type="radio"] {
 }
 
 .active-stage {
+  color: rgb(54, 106, 220);
+}
+
+.active-stage .stages__block-text p {
   color: rgb(54, 106, 220);
 }
 
@@ -2051,12 +2139,13 @@ input[type="radio"] {
 
 .checkout__add-product form {
   display: flex;
-  justify-content: space-between;
   gap: 0 16px;
+  justify-content: center;
 }
 
 .checkout__add-product form input {
   width: 100%;
+  max-width: 520px;
 }
 
 .checkout__add-product form button {
@@ -2072,6 +2161,7 @@ input[type="radio"] {
   font-family: "Mulish";
   font-size: 18px;
   line-height: 23px;
+  cursor: pointer;
 }
 
 .attention,
@@ -2121,7 +2211,7 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 40px;
+  padding: 24px 76px 24px 40px;
   border-radius: 20px;
   background-color: rgb(243, 243, 246);
   margin-top: 56px;
@@ -2138,12 +2228,29 @@ input[type="radio"] {
 .product__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  max-width: 475px;
+  gap: 0 40px;
+}
+
+.product__info p:nth-child(1) {
+  width: 19%;
+}
+
+.product__info p:nth-child(2) {
+  width: 13%;
+}
+
+.product__info p:nth-child(4) {
+  width: 11%;
 }
 
 .product__name,
 .product__info {
   width: 100%;
+}
+
+.product__name {
+  width: 85%;
 }
 
 .checkout__products {
@@ -2152,24 +2259,38 @@ input[type="radio"] {
   background-color: rgb(243, 243, 246);
 }
 
+.checkout__product {
+  display: flex;
+}
+
+.added-goods__inner .checkout__product {
+  margin-bottom: 32px;
+}
+
 .checkout__products hr {
   display: none;
 }
 
-.checkout__product {
+.checkout__product__inner {
   display: flex;
   margin-bottom: 32px;
+  width: 100%;
+  gap: 0 40px;
 }
 
 .edit-icons__product {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 12px 0;
-  order: 1;
+}
+
+.desctop-block {
+  margin-right: 24px;
 }
 
 .edit-icons__product img {
   cursor: pointer;
+  width: 16px;
 }
 
 .product-main__info {
@@ -2177,6 +2298,7 @@ input[type="radio"] {
   gap: 0 24px;
   align-items: center;
   width: 100%;
+  max-width: 361px;
 }
 
 .product__img {
@@ -2211,6 +2333,7 @@ input[type="radio"] {
 .product__brief h4 {
   background-color: rgb(229, 255, 209);
   margin-bottom: 6px;
+  padding: 6px;
 }
 
 .product__brief-text {
@@ -2241,8 +2364,9 @@ input[type="radio"] {
   align-items: flex-start;
   font-size: 16px;
   font-weight: 400;
-  line-height: 10px;
+  line-height: 20px;
   width: 100%;
+  max-width: 475px;
   font-family: "Mulish";
 }
 
@@ -2271,8 +2395,14 @@ input[type="radio"] {
 .right-block input {
   width: 49px;
   text-align: center;
+  font-size: 18px;
   border: none;
   background: transparent;
+}
+
+.product__toggle input::placeholder,
+.right-block input::placeholder {
+  color: rgb(40, 40, 44);
 }
 
 .product__toggle input:focus,
@@ -2305,6 +2435,7 @@ input[type="radio"] {
   margin-top: 34px;
   justify-content: center;
   gap: 0 8px;
+  cursor: pointer;
 }
 
 .add-more-product p,
@@ -2315,6 +2446,296 @@ input[type="radio"] {
   line-height: 20px;
   color: rgb(54, 106, 220);
 }
+
+/* Стили для попапа перемещения товара */
+
+.send__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  border-radius: 40px;
+  padding: 72px 125px 72px 40px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.send__inner::-webkit-scrollbar {
+  width: 0;
+}
+
+.send__inner h3,
+.add__inner h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "BaronNeue";
+  margin-bottom: 24px;
+}
+
+.send__inner p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Mulish";
+  margin-bottom: 56px;
+}
+
+.product-data {
+  border-radius: 40px;
+  border: 1px solid transparent;
+  padding: 40px;
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+
+.product-data__blocks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.product-data__block p:nth-child(1) {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(159, 164, 175);
+}
+
+.product-data__block p:nth-child(2) {
+  margin-bottom: unset;
+}
+
+.product-data__block .product-price p {
+  margin-bottom: unset;
+}
+
+.product-data__block .product-price p:nth-child(1) {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 40, 44);
+}
+
+.product-data__block .product-price p:nth-child(2) {
+  color: rgb(54, 106, 220);
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.product-images {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.send-btn {
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(159, 164, 175);
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+.send-btn.active-btn {
+  background-color: rgb(54, 106, 220);
+}
+
+/* Конец стилей попапа для перемещения товаров */
+
+/* Стили для попапа добавления товара */
+
+.add__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  border-radius: 40px;
+  padding: 72px 40px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.add__inner::-webkit-scrollbar {
+  width: 0;
+}
+
+.add__inner h3 {
+  margin-bottom: 56px;
+}
+
+.add__inner form input::placeholder,
+.add__inner form textarea::placeholder {
+  color: rgb(40, 40, 44);
+}
+
+.add__inner form textarea {
+  height: 100px;
+  resize: none;
+  margin-bottom: 32px;
+}
+
+.add__inner form input {
+  width: 100%;
+}
+
+.add__inner p {
+  font-family: "Mulish";
+}
+
+.add__inner form p {
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.form-input__blocks {
+  display: grid;
+  gap: 16px 24px;
+  grid-template-areas:
+    "A A A A   B B B B"
+    "C C C C   D D D D"
+    "E E E E   E E E E";
+}
+
+.input-1 {
+  margin-bottom: 12px;
+}
+
+.input-2 {
+  color: rgb(40, 40, 44);
+  margin-bottom: 24px;
+}
+
+.input-2 a {
+  color: rgb(54, 106, 220);
+}
+
+.input-3 {
+  margin-bottom: 12px;
+}
+
+.input-4 {
+  color: rgb(159, 164, 175);
+  margin-bottom: 24px;
+}
+
+.input-5 {
+  grid-area: A;
+}
+
+.input-6 {
+  grid-area: B;
+}
+
+.input-7 {
+  grid-area: C;
+}
+
+.input-8 {
+  grid-area: D;
+}
+
+.input-9 {
+  grid-area: E;
+}
+
+.product-summary {
+  display: flex;
+  max-width: 475px;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+}
+
+.summary-box,
+.summary-box__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.product-summary .summary-box .product__toggle {
+  margin-right: unset;
+}
+
+.summary-box p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.summary-box p:nth-child(1) {
+  color: rgb(159, 164, 175);
+}
+
+.summary-box p:nth-child(2) {
+  color: rgb(40, 40, 44);
+}
+
+.add-product__images {
+  display: flex;
+  gap: 0 16px;
+  margin-bottom: 32px;
+}
+
+.additional-functions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  margin-bottom: 56px;
+}
+
+.additional-functions label span {
+  color: rgb(54, 106, 220);
+}
+
+.add-product__footer {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+}
+
+.add-product__footer button {
+  padding: 16px 30px;
+  background-color: rgb(54, 106, 220);
+  border: none;
+  border-radius: 10px;
+  font-family: "Mulish";
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-product__attention {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+}
+
+.add-product__attention p {
+  font-family: "Mulish";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(40, 40, 44);
+}
+
+/* Конец стилей попапа для добавления товаров */
 
 .stage-one__inner .attention {
   margin-top: 24px;
@@ -2440,10 +2861,13 @@ input[type="radio"] {
   font-family: "Mulish";
 }
 
+.type-cargo .radio-text p {
+  margin-bottom: 8px;
+}
+
 .radio-text p {
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 8px;
 }
 
 .radio-text span {
@@ -2490,8 +2914,13 @@ input[type="radio"] {
   gap: 0 24px;
 }
 
-.stage-two button:nth-child(1) {
+.stage-two .goback {
   background-color: rgb(171, 197, 255);
+  color: rgb(40, 40, 44);
+}
+
+.stage-two .confirm-btn {
+  background-color: rgb(159, 164, 175);
   color: rgb(40, 40, 44);
 }
 
@@ -2543,6 +2972,7 @@ input[type="radio"] {
   font-size: 18px;
   line-height: 23px;
   border: none;
+  cursor: pointer;
 }
 
 .use-data__footer .add-more-product {
@@ -2599,7 +3029,7 @@ input[type="radio"] {
 .summary-field .saved-data__main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px 0;
+  gap: 24px 15px;
 }
 
 .summary-price h3 {
@@ -2682,6 +3112,86 @@ input[type="radio"] {
   color: rgb(54, 106, 220);
 }
 
+/* Стили для попапа отправки товара на проверку */
+
+.review__pop-up {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.review__pop-up.active_shadow {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.review__inner {
+  background-color: rgb(243, 243, 246);
+  max-width: 768px;
+  width: 100%;
+  min-height: 347px;
+  border-radius: 40px;
+  padding: 72px 192px 72px 40px;
+  position: relative;
+  z-index: 1000;
+  color: rgb(40, 40, 44);
+  display: none;
+}
+
+.review__inner.active_window {
+  display: block;
+}
+
+.review__inner h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "BaronNeue";
+  margin-bottom: 24px;
+}
+
+.review__inner p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Mulish";
+  margin-bottom: 40px;
+}
+
+.review__btns {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+}
+
+.review__btns button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(54, 106, 220);
+  font-size: 18px;
+  line-height: 23px;
+  font-family: "Mulish";
+  cursor: pointer;
+}
+
+.review__btns p {
+  margin-bottom: unset;
+  cursor: pointer;
+}
+
+
 /* Стили для оформления груза (пустой заказ) */
 
 .add-cargo {
@@ -2712,6 +3222,7 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   margin-top: 32px;
+  cursor: pointer;
 }
 
 .add-cargo__btn p {
@@ -2730,6 +3241,16 @@ input[type="radio"] {
   align-items: center;
 }
 
+.added-goods__inner .product-main__info {
+  max-width: 293px;
+}
+
+.added-goods__inner .product__info {
+  max-width: 379px;
+  justify-content: space-between;
+  gap: unset;
+}
+
 .added-goods__inner .checkout__header,
 .added-goods__inner .checkout__products {
   max-width: 792px;
@@ -2739,6 +3260,7 @@ input[type="radio"] {
 .added-goods__inner .product__quantity-and-price {
   height: 24px;
   align-items: center;
+  max-width: 379px;
 }
 
 .added-goods__inner .product-main__info {
@@ -2752,3 +3274,22 @@ input[type="radio"] {
 .added-goods__inner .next-step {
   margin-top: 56px;
 }
+
+/* Стили для Графика курс валют */
+.highcharts-container svg rect {
+  fill: rgb(243, 243, 246);
+  /* rgb(159, 164, 175) */
+}
+
+.highcharts-legend,
+.highcharts-axis-labels,
+.highcharts-axis.highcharts-yaxis,
+.highcharts-axis.highcharts-xaxis,
+.highcharts-grid.highcharts-yaxis-grid {
+  display: none;
+}
+
+.highcharts-axis-line {
+  stroke: rgb(159, 164, 175);
+}
+

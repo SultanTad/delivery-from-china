@@ -34,6 +34,25 @@ const useSavedData = document.querySelector(".use-saved-data");
 const useDataPopup = document.querySelector(".use-data__pop-up");
 const useDataWindow = document.querySelector(".use-data__inner");
 
+//Модалка для перемещения товара
+const sendProduct = document.querySelectorAll(".send-product");
+const sendPopup = document.querySelector(".send__pop-up");
+const sendWindow = document.querySelector(".send__inner");
+
+//Модалка для добавления и редактирования товара и груза
+const addMoreProduct = document.querySelector(".add-more-product");
+const editProduct = document.querySelector(".edit-product");
+const addCargoBtn = document.querySelector(".add-cargo__btn");
+const searchBtn = document.querySelector(".search-btn");
+const addPopup = document.querySelector(".add__pop-up");
+const addInner = document.querySelector(".add__inner");
+
+// Модалка подтверждения и отмены заказа оператору
+const sendToReview = document.querySelector(".send-to-review");
+const deleteProduct = document.querySelector(".delete-product")
+const reviewPopup = document.querySelector(".review__pop-up");
+const reviewInner = document.querySelector(".review__inner");
+
 //Табы
 const tabs = document.querySelector(".personal-acount");
 const tabsBtn = document.querySelectorAll(".tabs__btn");
@@ -49,7 +68,6 @@ const newsItem = document.querySelectorAll(".news__item");
 //Анимация при скролле
 const scrollAnimation = () => {
   let windowCenter = window.innerHeight / 2 + window.scrollY;
-  console.log(windowCenter);
   whyChooseUsItem.forEach((item) => {
     if (windowCenter >= 1070) {
       item.classList.add("animation-class");
@@ -169,8 +187,12 @@ if (editSettings) {
 if (popupClose) {
   popupClose.forEach((item) => {
     item.addEventListener("click", () => {
-      editSettingsPopup.classList.remove("active_shadow");
-      editSettingsPopupWindow.classList.remove("active_window");
+      if (editSettingsPopup) {
+        editSettingsPopup.classList.remove("active_shadow");
+      }
+      if (editSettingsPopupWindow) {
+        editSettingsPopupWindow.classList.remove("active_window");
+      }
       document.body.style.overflow = "inherit";
     });
   });
@@ -191,8 +213,12 @@ if (editSavedData) {
 if (popupClose) {
   popupClose.forEach((item) => {
     item.addEventListener("click", () => {
-      editSavedDataPopup.classList.remove("active_shadow");
-      editSavedDataPopupWindow.classList.remove("active_window");
+      if (editSavedDataPopup) {
+        editSavedDataPopup.classList.remove("active_shadow");
+      }
+      if (editSavedDataPopupWindow) {
+        editSavedDataPopupWindow.classList.remove("active_window");
+      }
       document.body.style.overflow = "inherit";
     });
   });
@@ -211,8 +237,12 @@ if (addNewData) {
 if (popupClose) {
   popupClose.forEach((item) => {
     item.addEventListener("click", () => {
-      addNewDataPopup.classList.remove("active_shadow");
-      addNewDataPopupWindwow.classList.remove("active_window");
+      if (addNewDataPopup) {
+        addNewDataPopup.classList.remove("active_shadow");
+      }
+      if (addNewDataPopupWindwow) {
+        addNewDataPopupWindwow.classList.remove("active_window");
+      }
       document.body.style.overflow = "inherit";
     });
   });
@@ -236,6 +266,110 @@ if (popupClose) {
       }
       if (useDataWindow) {
         useDataWindow.classList.remove("active_window");
+      }
+      document.body.style.overflow = "inherit";
+    });
+  });
+}
+
+//Закрытие-открытие модалки перемещения товара
+if (sendProduct) {
+  sendProduct.forEach((item) => {
+    item.addEventListener("click", () => {
+      sendPopup.classList.add("active_shadow");
+      sendWindow.classList.add("active_window");
+      document.body.style.overflow = "hidden";
+    });
+  });
+}
+
+if (popupClose) {
+  popupClose.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (sendPopup) {
+        sendPopup.classList.remove("active_shadow");
+      }
+      if (sendWindow) {
+        sendWindow.classList.remove("active_window");
+      }
+      document.body.style.overflow = "inherit";
+    });
+  });
+}
+
+// Модалка подтверждения и отмены заказа оператору
+if (sendToReview) {
+  sendToReview.addEventListener("click", () => {
+    reviewPopup.classList.add("active_shadow");
+    reviewInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if(deleteProduct) {
+  deleteProduct.addEventListener("click", ()=> {
+    reviewPopup.classList.add("active_shadow");
+    reviewInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  })
+}
+
+if (popupClose) {
+  popupClose.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (reviewPopup) {
+        reviewPopup.classList.remove("active_shadow");
+      }
+      if (reviewInner) {
+        reviewInner.classList.remove("active_window");
+      }
+      document.body.style.overflow = "inherit";
+    });
+  });
+}
+
+//Закрытие-открытие модалки добавления и редактирования товара и груза
+if (addMoreProduct) {
+  addMoreProduct.addEventListener("click", () => {
+    addPopup.classList.add("active_shadow");
+    addInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if (editProduct) {
+  editProduct.addEventListener("click", () => {
+    addPopup.classList.add("active_shadow");
+    addInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if (addCargoBtn) {
+  addCargoBtn.addEventListener("click", () => {
+    addPopup.classList.add("active_shadow");
+    addInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if (searchBtn) {
+  searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    addPopup.classList.add("active_shadow");
+    addInner.classList.add("active_window");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if (popupClose) {
+  popupClose.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (addPopup) {
+        addPopup.classList.remove("active_shadow");
+      }
+      if (addInner) {
+        addInner.classList.remove("active_window");
       }
       document.body.style.overflow = "inherit";
     });
@@ -275,7 +409,53 @@ const testimonialsSwiper = new Swiper(".testimonials-slider", {
 //Кастомное выпадающее меню
 
 const element = document.querySelector(".js-choice");
-const choices = new Choices(element, {
-  searchEnabled: false,
-  itemSelectText: "",
+if(element) {
+  const choices = new Choices(element, {
+    searchEnabled: false,
+    itemSelectText: "",
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const chart = Highcharts.chart("container", {
+    chart: {
+      width: 189,
+      height: 126,
+    },
+    tooltip: { enabled: false },
+    credits: { enabled: false },
+    title: {
+      text: "",
+    },
+    yAxis: {
+      labels: {
+          align: 'left',
+          x: 0,
+          y: -2
+      },
+      title: {
+          text: ''
+      }
+  },
+    plotOptions: {
+      series: {
+        lineWidth: 1,
+        marker: {
+          fillColor: "rgb(54, 106, 220)",
+          lineColor: "rgb(54, 106, 220)",
+          radius: 1,
+        },
+      },
+    },
+
+    series: [
+      {
+        name: "John",
+        data: [0, 10, 15, 5, 15, 3, 18],
+        color: "rgb(159, 164, 175)",
+        enableMouseTracking: false,
+      },
+    ],
+
+  });
 });
