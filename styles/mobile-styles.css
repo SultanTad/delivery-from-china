@@ -138,6 +138,10 @@
     fill: #fff;
     stroke: #fff;
   }
+  
+  .services__item svg:hover {
+    background-color: rgb(54, 106, 220);
+  }
 
   .info-square:hover ~ .mini-pop-up,
   .info-square:hover ~ .mini-pop-up2 {
@@ -898,13 +902,17 @@
     gap: 24px 0;
   }
 
+  .btn-box a button {
+    width: 100%;
+  }
+
   .news__inner .news__list {
     grid-template-columns: 1fr;
     gap: 24px 0;
     overflow-x: unset;
   }
 
-  .news__item {
+  .news__inner .news__item {
     max-width: 382px;
     width: unset;
   }

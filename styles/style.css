@@ -157,6 +157,7 @@ p {
   font-size: 1.125rem;
   margin-bottom: 4.5rem;
   line-height: 1.4375rem;
+  font-family: "Mulish";
 }
 
 .btn-box {
@@ -176,6 +177,7 @@ p {
   cursor: pointer;
   font-size: 1.125rem;
   font-family: "Mulish";
+  line-height: 1.4375rem;
 }
 
 .btn-box a:last-child button {
@@ -187,6 +189,7 @@ p {
   cursor: pointer;
   font-size: 1.125rem;
   font-family: "Mulish";
+  line-height: 1.4375rem;
 }
 
 .why-choose-us {
