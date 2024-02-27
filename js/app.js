@@ -392,18 +392,8 @@ closeMenu.addEventListener("click", () => {
 
 const testimonialsSwiper = new Swiper(".testimonials-slider", {
   loop: true,
-  slidesPerView: 1.6,
+  slidesPerView: "auto",
   spaceBetween: 24,
-  breakpoints: {
-    745: {
-      slidesPerView: 2,
-      spaceBetween: 24,
-    },
-    1240: {
-      slidesPerView: 4,
-      spaceBetween: 24,
-    },
-  },
 });
 
 //Кастомное выпадающее меню

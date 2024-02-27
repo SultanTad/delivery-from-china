@@ -3,11 +3,7 @@
     font-size: 18px;
   }
 }
-@media (max-width: 1240px) {
-  .testimonials-slider {
-    padding-left: 40px;
-  }
-}
+
 @media (max-width: 1140px) {
   .item1 {
     width: 100%;
@@ -535,6 +531,9 @@
     padding: 92px 16px 72px 16px;
   }
  
+  .testimonials-slide {
+    width: 242px;
+  }
 }
 
 @media (max-width: 572px) {
@@ -818,10 +817,6 @@
   .testimonials-slide {
     padding: 32px 24px;
     height: 372px;
-  }
-
-  .testimonials-slider {
-    padding-left: 16px;
   }
 
   .help__header h2 {
