@@ -391,7 +391,7 @@ closeMenu.addEventListener("click", () => {
 //Слайдер
 
 const testimonialsSwiper = new Swiper(".testimonials-slider", {
-  loop: true,
+  // loop: true,
   slidesPerView: "auto",
   spaceBetween: 24,
 });
